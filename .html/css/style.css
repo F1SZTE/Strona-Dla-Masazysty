@@ -1,10 +1,13 @@
 :root {
-    --green: #254c3c;
-    --green-dark: #18372b;
-    --green-light: #dce8df;
+    --green: #3B858C;
+    --green-dark: #20528b;;
+    --green-light: #998bdb;
     --cream: #f4f0e8;
     --cream-dark: #e9e2d5;
     --white: #ffffff;
+    --grey: #535858;
+    --grey-dark: #111111;
+    --grey-light: #b1b1b1;
     --text: #24312b;
     --muted: #707a74;
     --border: #dce1db;
@@ -324,7 +327,7 @@ h2 i {
     display: grid;
     place-items: center;
     background: var(--green-light);
-    color: var(--green);
+    color: var(--grey-dark);
     font-size: 23px;
     margin-bottom: 35px;
 }
