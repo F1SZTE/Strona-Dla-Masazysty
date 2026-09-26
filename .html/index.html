@@ -1,202 +1,281 @@
-```html
 <!DOCTYPE html>
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Profesjonalny masaż relaksacyjny, klasyczny i sportowy. Zadbaj o swoje ciało i dobre samopoczucie.">
-    <title>MasażPro | Profesjonalny masaż</title>
+    <title>FizjoTerapia </title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-<header>
-    <nav class="navbar">
-        <a href="index.html" class="logo">Masaż<span>Pro</span></a>
+<header class="navbar">
+    <div class="container nav-inner">
 
-        <button class="menu-btn" aria-label="Otwórz menu">☰</button>
+        <a href="#" class="logo">
+            <span class="logo-icon">◉</span>
+            <span>
+                Fizjo<span>Andrzej</span>
+                <small>FIZJOTERAPIA</small>
+            </span>
+        </a>
 
-        <ul class="nav-links">
-            <li><a href="index.html">Start</a></li>
-            <li><a href="uslugi.html">Usługi</a></li>
-            <li><a href="cennik.html">Cennik</a></li>
-            <li><a href="o-mnie.html">O mnie</a></li>
-            <li><a href="kontakt.html">Kontakt</a></li>
-        </ul>
-    </nav>
+        <nav>
+            <a href="uslugi.html">Nasze Usługi</a>
+            <a href="o-mnie.html">O nas</a>
+            <a href="cennik.html">Cennik</a>
+            <a href="kontakt.html">Kontakt</a>
+        </nav>
+
+        <a href="kontakt.html" class="nav-button">
+            Umów wizytę
+        </a>
+
+        <button class="menu-button">☰</button>
+
+    </div>
 </header>
+
 
 <main>
 
 <section class="hero">
-    <div class="hero-content">
 
-        <p class="small-title">STREFA RELAKSU</p>
+    <div class="hero-background"></div>
 
-        <h1>
-            Zatrzymaj się.
-            <span>Odpręż się.</span>
-        </h1>
+    <div class="container hero-content">
 
-        <p>
-            Profesjonalny masaż dopasowany do Twojego ciała,
-            potrzeb i codziennego trybu życia.
-        </p>
+        <div class="hero-text">
 
-        <div class="hero-buttons">
-            <a href="kontakt.html" class="btn">Umów wizytę</a>
-            <a href="uslugi.html" class="btn btn-outline">Poznaj ofertę</a>
+            <div class="eyebrow">
+                GABINET FIZJOTERAPII
+            </div>
+
+            <h1>
+                Gabinet fizjoterapii – masz jeden kręgosłup, powierz go fachowcom!
+            </h1>
+
+            <p>
+                Profesjonalna pomoc w bólu i ograniczeniach ruchowych
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#kontakt" class="button button-primary">
+                    Umów konsultację
+                </a>
+
+                <a href="#oferta" class="button button-outline">
+                    Zobacz ofertę
+                </a>
+            </div>
+
         </div>
 
     </div>
-</section>
 
-
-<section class="section">
-
-    <div class="section-title">
-        <p>OFERTA</p>
-        <h2>Znajdź masaż dla siebie</h2>
-    </div>
-
-    <div class="cards">
-
-        <article class="card">
-            <div class="card-icon">✦</div>
-            <h3>Masaż relaksacyjny</h3>
-            <p>
-                Spokojny masaż całego ciała, który pozwala
-                rozluźnić mięśnie i odpocząć od codziennego stresu.
-            </p>
-            <a href="uslugi.html">Sprawdź usługę →</a>
-        </article>
-
-        <article class="card">
-            <div class="card-icon">✦</div>
-            <h3>Masaż klasyczny</h3>
-            <p>
-                Skupienie na napiętych partiach ciała,
-                poprawa komfortu i rozluźnienie mięśni.
-            </p>
-            <a href="uslugi.html">Sprawdź usługę →</a>
-        </article>
-
-        <article class="card">
-            <div class="card-icon">✦</div>
-            <h3>Masaż sportowy</h3>
-            <p>
-                Intensywniejszy masaż dla osób aktywnych,
-                które potrzebują regeneracji po wysiłku.
-            </p>
-            <a href="uslugi.html">Sprawdź usługę →</a>
-        </article>
-
-    </div>
+    <div class="hero-leaf leaf-one"></div>
+    <div class="hero-leaf leaf-two"></div>
 
 </section>
 
 
-<section class="about-preview">
+<section class="intro">
 
-    <div>
+    <div class="container">
 
-        <p class="small-title">INDYWIDUALNE PODEJŚCIE</p>
+        <div class="section-heading centered">
+            <span>NASZA OFERTA</span>
+
+            <h2>
+                Zadbaj o swoje ciało
+                <br>
+                <i>z odpowiednią pomocą.</i>
+            </h2>
+
+            <p>
+                Indywidualne podejście, doświadczenie i nowoczesne
+                metody terapii pozwalają nam dopasować leczenie
+                do potrzeb każdego pacjenta.
+            </p>
+        </div>
+
+
+        <div class="services-grid" id="oferta">
+
+            <article class="service-card">
+                <div class="service-number">01</div>
+                <div class="service-icon">✦</div>
+
+                <h3>Konsultacja</h3>
+
+                <p>
+                    Poznamy przyczynę Twoich dolegliwości
+                    i przygotujemy indywidualny plan terapii.
+                </p>
+
+                <a href="kontakt.html">Dowiedz się więcej →</a>
+            </article>
+
+
+            <article class="service-card">
+                <div class="service-number">02</div>
+                <div class="service-icon">◌</div>
+
+                <h3>Terapia manualna</h3>
+
+                <p>
+                    Praca z mięśniami, stawami i tkankami
+                    w celu poprawy ruchomości i zmniejszenia bólu.
+                </p>
+
+                <a href="kontakt.html">Dowiedz się więcej →</a>
+            </article>
+
+
+            <article class="service-card">
+                <div class="service-number">03</div>
+                <div class="service-icon">⌁</div>
+
+                <h3>Suche igłowanie</h3>
+
+                <p>
+                    Technika stosowana między innymi przy
+                    napięciu mięśniowym i dolegliwościach bólowych.
+                </p>
+
+                <a href="kontakt.html">Dowiedz się więcej →</a>
+            </article>
+
+
+            <article class="service-card">
+                <div class="service-number">04</div>
+                <div class="service-icon">◒</div>
+
+                <h3>Fala uderzeniowa</h3>
+
+                <p>
+                    Nowoczesna metoda fizjoterapeutyczna
+                    wykorzystywana w leczeniu wielu schorzeń.
+                </p>
+
+                <a href="kontakt.html">Dowiedz się więcej →</a>
+            </article>
+
+
+            <article class="service-card">
+                <div class="service-number">05</div>
+                <div class="service-icon">♡</div>
+
+                <h3>Masaż sportowy</h3>
+
+                <p>
+                    Regeneracja mięśni, poprawa krążenia
+                    i przygotowanie organizmu do aktywności.
+                </p>
+
+                <a href="kontakt.html">Dowiedz się więcej →</a>
+            </article>
+
+
+            <article class="service-card">
+                <div class="service-number">06</div>
+                <div class="service-icon">＋</div>
+
+                <h3>Rehabilitacja</h3>
+
+                <p>
+                    Indywidualny program powrotu do sprawności
+                    po urazach, zabiegach i operacjach.
+                </p>
+
+                <a href="kontakt.html">Dowiedz się więcej →</a>
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="split-section">
+
+    <div class="split-image"></div>
+
+    <div class="split-content">
+
+        <span class="section-label">
+            DLA CIEBIE
+        </span>
 
         <h2>
-            Twój odpoczynek
-            zaczyna się tutaj.
+            Pomagamy Ci
+            <i>wrócić do ruchu.</i>
         </h2>
 
         <p>
-            Każdy organizm jest inny. Dlatego przed rozpoczęciem
-            masażu poznaję Twoje potrzeby i dobieram odpowiednią
-            technikę oraz intensywność zabiegu.
+            Ból, kontuzja czy ograniczona ruchomość nie muszą
+            być częścią Twojej codzienności. Wspólnie znajdziemy
+            źródło problemu i dobierzemy odpowiednią terapię.
         </p>
 
-        <a href="o-mnie.html" class="btn">Poznaj mnie</a>
+        <div class="check-list">
 
-    </div>
+            <div>
+                <span>✓</span>
+                Indywidualny plan terapii
+            </div>
 
-    <div class="about-box">
+            <div>
+                <span>✓</span>
+                Profesjonalna diagnostyka
+            </div>
 
-        <div>
-            <strong>5+</strong>
-            <span>lat doświadczenia</span>
+            <div>
+                <span>✓</span>
+                Nowoczesne metody fizjoterapii
+            </div>
+
+            <div>
+                <span>✓</span>
+                Edukacja i profilaktyka
+            </div>
+
         </div>
 
-        <div>
-            <strong>1000+</strong>
-            <span>wykonanych masaży</span>
-        </div>
-
-        <div>
-            <strong>4.9</strong>
-            <span>średnia ocen klientów</span>
-        </div>
-
-        <div>
-            <strong>100%</strong>
-            <span>indywidualnego podejścia</span>
-        </div>
-
-    </div>
-
-</section>
-
-
-<section class="section">
-
-    <div class="section-title">
-        <p>DLACZEGO WARTO</p>
-        <h2>Więcej niż zwykły masaż</h2>
-    </div>
-
-    <div class="cards">
-
-        <article class="card">
-            <div class="card-icon">01</div>
-            <h3>Spokojna atmosfera</h3>
-            <p>
-                Kameralne miejsce stworzone po to,
-                aby naprawdę można było odpocząć.
-            </p>
-        </article>
-
-        <article class="card">
-            <div class="card-icon">02</div>
-            <h3>Indywidualny plan</h3>
-            <p>
-                Technika masażu jest dobierana do Twoich
-                potrzeb i oczekiwań.
-            </p>
-        </article>
-
-        <article class="card">
-            <div class="card-icon">03</div>
-            <h3>Profesjonalne podejście</h3>
-            <p>
-                Komfort i bezpieczeństwo klienta są
-                najważniejsze podczas każdej wizyty.
-            </p>
-        </article>
+        <a href="kontakt.html" class="button button-primary">
+            Poznaj nas
+        </a>
 
     </div>
 
 </section>
+
 
 
 <section class="cta">
 
-    <p class="small-title">CZAS DLA CIEBIE</p>
+    <div class="container cta-content">
 
-    <h2>Potrzebujesz chwili odpoczynku?</h2>
+        <div>
+            <span>MASZ PYTANIA?</span>
 
-    <p>
-        Zarezerwuj termin i pozwól sobie zwolnić.
-    </p>
+            <h2>
+                Zrób pierwszy krok
+                <i>do sprawności.</i>
+            </h2>
+        </div>
 
-    <a href="kontakt.html" class="btn">Umów wizytę</a>
+        <a href="kontakt.html" class="button button-light">
+            Umów konsultację
+        </a>
+
+    </div>
 
 </section>
 
@@ -205,32 +284,26 @@
 
 <footer>
 
-    <div class="footer-content">
+    <div class="container footer-inner">
 
-        <div>
-            <h3>MasażPro</h3>
-            <p>
-                Profesjonalny masaż,
-                relaks i indywidualne podejście.
-            </p>
+        <div class="footer-logo">
+            Andrzej<span>Masaż</span>
+            <small>FIZJOTERAPIA</small>
         </div>
 
-        <div>
-            <p>500 600 700</p>
-            <p>kontakt@masazpro.pl</p>
-            <p>Warszawa</p>
+        <p>
+            © 2026 Jak tam się to nazywało
+        </p>
+
+        <div class="footer-links">
+            <a href="politykaprywatnosci.html">Polityka prywatności</a>
+            <a href="Regulamin.html">Regulamin</a>
         </div>
 
     </div>
 
-    <p class="copyright">
-        © <span id="year"></span> MasażPro
-    </p>
-
 </footer>
 
-<script src="js/script.js"></script>
 
 </body>
 </html>
-```

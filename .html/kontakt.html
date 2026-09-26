@@ -1,223 +1,70 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kontakt | MasażPro</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Kontakt Z Nami!</title>
 </head>
-
 <body>
+    <section class="contact" id="kontakt">
 
-<header>
-    <nav class="navbar">
+    <div class="container contact-grid">
 
-        <a href="index.html" class="logo">
-            Masaż<span>Pro</span>
-        </a>
+        <div>
 
-        <button class="menu-btn">☰</button>
+            <span class="section-label">
+                KONTAKT
+            </span>
 
-        <ul class="nav-links">
-            <li><a href="index.html">Start</a></li>
-            <li><a href="uslugi.html">Usługi</a></li>
-            <li><a href="cennik.html">Cennik</a></li>
-            <li><a href="o-mnie.html">O mnie</a></li>
-            <li><a href="kontakt.html">Kontakt</a></li>
-        </ul>
-
-    </nav>
-</header>
-
-
-<main>
-
-<section class="page-header">
-
-    <p class="small-title">KONTAKT</p>
-
-    <h1>Umów wizytę</h1>
-
-    <p>
-        Wybierz dogodny termin i skontaktuj się ze mną.
-    </p>
-
-</section>
-
-
-<section class="contact-section">
-
-    <div class="contact-info">
-
-        <h2>
-            Porozmawiajmy.
-        </h2>
-
-
-        <div class="contact-item">
-
-            <strong>TELEFON</strong>
+            <h2>
+                Jesteśmy tutaj,
+                <i>aby Ci pomóc.</i>
+            </h2>
 
             <p>
-                500 600 700
+                Skontaktuj się z nami i umów swoją pierwszą
+                konsultację.
             </p>
 
         </div>
 
 
-        <div class="contact-item">
+        <div class="contact-details">
 
-            <strong>EMAIL</strong>
+            <div>
+                <span>TELEFON</span>
+                <a href="tel:+48 22 625 61 38">
+                    +48 (22) 625-61-38
+                </a>
+            </div>
 
-            <p>
-                kontakt@masazpro.pl
-            </p>
+            <div>
+                <span>EMAIL</span>
+                <a href="mailto:info@fizykoterapia.waw.pl">
+                    Mail: info@fizykoterapia.waw.pl
+                </a>
+            </div>
 
-        </div>
+            <div>
+                <span>ADRES</span>
+                <p>
+                   Warszawa, ul. Mokotowska 26 m. 5<br>
+                    
+                </p>
+            </div>
 
-
-        <div class="contact-item">
-
-            <strong>ADRES</strong>
-
-            <p>
-                ul. Przykładowa 10<br>
-                00-001 Warszawa
-            </p>
-
-        </div>
-
-
-        <div class="contact-item">
-
-            <strong>GODZINY</strong>
-
-            <p>
-                Poniedziałek - Piątek<br>
-                9:00 - 20:00
-            </p>
-
-            <p>
-                Sobota<br>
-                10:00 - 16:00
-            </p>
+            <div>
+                <span>GODZINY</span>
+                <p>
+                    Poniedziałek — Piątek<br>
+                    9:00 — 17:00
+                </p>
+            </div>
 
         </div>
 
     </div>
 
-
-    <form id="contactForm" class="contact-form">
-
-        <label for="name">
-            Imię
-        </label>
-
-        <input
-            type="text"
-            id="name"
-            placeholder="Jak masz na imię?"
-            required
-        >
-
-
-        <label for="email">
-            Email
-        </label>
-
-        <input
-            type="email"
-            id="email"
-            placeholder="twoj@email.pl"
-            required
-        >
-
-
-        <label for="service">
-            Usługa
-        </label>
-
-        <select id="service" required>
-
-            <option value="">
-                Wybierz masaż
-            </option>
-
-            <option>
-                Masaż relaksacyjny
-            </option>
-
-            <option>
-                Masaż klasyczny
-            </option>
-
-            <option>
-                Masaż sportowy
-            </option>
-
-            <option>
-                Masaż pleców i karku
-            </option>
-
-        </select>
-
-
-        <label for="message">
-            Wiadomość
-        </label>
-
-        <textarea
-            id="message"
-            rows="6"
-            placeholder="Napisz, jaki termin Cię interesuje..."
-            required
-        ></textarea>
-
-
-        <button
-            type="submit"
-            class="btn"
-        >
-            Wyślij wiadomość
-        </button>
-
-
-        <p id="formMessage"></p>
-
-    </form>
-
 </section>
-
-</main>
-
-
-<footer>
-
-    <div class="footer-content">
-
-        <div>
-            <h3>MasażPro</h3>
-            <p>
-                Profesjonalny masaż,
-                relaks i indywidualne podejście.
-            </p>
-        </div>
-
-        <div>
-            <p>500 600 700</p>
-            <p>kontakt@masazpro.pl</p>
-            <p>Warszawa</p>
-        </div>
-
-    </div>
-
-    <p class="copyright">
-        © <span id="year"></span> MasażPro
-    </p>
-
-</footer>
-
-<script src="js/script.js"></script>
-
 </body>
 </html>
