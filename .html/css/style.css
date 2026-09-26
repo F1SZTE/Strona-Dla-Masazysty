@@ -299,7 +299,7 @@ h2 i {
 
 .service-card {
     position: relative;
-    min-height: 310px;
+    min-height: 100px;
     padding: 38px;
     border: 1px solid var(--border);
     background: white;
