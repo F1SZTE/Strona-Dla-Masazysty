@@ -143,7 +143,7 @@ nav a:hover {
 /* HERO */
 
 .hero {
-    min-height: 300px;
+    min-height: 50px;
     position: relative;
     overflow: hidden;
     background:
@@ -153,7 +153,7 @@ nav a:hover {
             rgba(239,236,225,.91) 42%,
             rgba(239,236,225,.25) 100%
         ),
-        url("https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1800&q=85")
+        url("https://d375139ucebi94.cloudfront.net/region2/pl/241340/biz_photo/596693058ba84b17b875e3dd3b2a03-kacper-debek-biuro-masaz-biz-photo-7eb570a75d5f47b9813a33f9bbfa28-booksy.jpeg")
         center/cover;
 }
 
