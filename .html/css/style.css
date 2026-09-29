@@ -767,6 +767,18 @@ body.contact-page .contact {
     color: var(--green); 
 } 
  
+.contact-map {
+    grid-column: 1 / -1;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.contact-map iframe {
+    display: block;
+    width: 100%;
+    height: 380px;
+    border: 0;
+}
  
 /* FOOTER */ 
  
@@ -784,19 +796,40 @@ footer {
 } 
  
 .footer-logo { 
-    font-family: var(--serif); 
-    font-size: 22px; 
+    display: block;
+    width: 180px;
+    max-width: 100%;
 } 
  
-.footer-logo span { 
-    font-style: italic; 
-} 
- 
-.footer-logo small { 
+.footer-logo-home {
+    width: 220px;
+}
+
+.footer-logo-home img {
+    padding: 6px;
+    border-radius: 4px;
+    background: #ffffff;
+}
+
+.footer-logo img {
     display: block; 
-    font-family: var(--sans); 
-    font-size: 7px; 
-    letter-spacing: 3px; 
+    width: 100%;
+    height: auto;
+}
+
+.footer-map {
+    width: 260px;
+    max-width: 100%;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+.footer-map iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
 } 
  
 .footer-inner p { 
@@ -1066,4 +1099,4 @@ footer {
         flex-direction: column;
         gap: 10px;
     }
-}
+}   
