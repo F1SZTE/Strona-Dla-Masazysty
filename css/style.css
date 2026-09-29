@@ -253,7 +253,7 @@ h2 i {
 /* HIGHLIGHT */
 
 .highlight {
-    padding: 125px 0;
+    padding: 40px 0;
     background: #7e2424;
 }
 
@@ -270,7 +270,7 @@ h2 i {
 /* INTRO */
 
 .intro {
-    padding: 125px 0;
+    padding: 40px 0;
     background: #fff;
 }
 
@@ -425,7 +425,7 @@ h2 i {
 /* ABOUT */ 
  
 .about { 
-    padding: 130px 0; 
+    padding: 40px 0; 
     background: #fff; 
 } 
  
@@ -502,7 +502,7 @@ h2 i {
 /* REVIEWS */ 
  
 .quote-section { 
-    padding: 120px 0; 
+    padding: 35px 0; 
     background: var(--cream); 
 } 
  
@@ -582,7 +582,7 @@ h2 i {
 /* CONTACT */ 
  
 .contact { 
-    padding: 120px 0; 
+    padding: 35px 0; 
     background: white; 
 } 
  
@@ -749,7 +749,7 @@ footer {
     .about,
     .quote-section,
     .contact {
-        padding: 80px 0;
+        padding: 25px 0;
     }
 
     .services-grid {

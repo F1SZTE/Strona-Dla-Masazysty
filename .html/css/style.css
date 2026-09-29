@@ -277,7 +277,7 @@ h2 i {
 /* INTRO */
 
 .intro {
-    padding: 125px 0;
+    padding: 40px 0;
     background: #fff;
 }
 
@@ -373,7 +373,7 @@ h2 i {
 
 .services-grid-2 {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(8, 1fr);
     gap: 18px;
     margin-top: 65px;
 }
@@ -537,7 +537,7 @@ h2 i {
 /* ABOUT */ 
  
 .about { 
-    padding: 130px 0; 
+    padding: 40px 0; 
     background: #fff; 
 } 
  
@@ -614,7 +614,7 @@ h2 i {
 /* REVIEWS */ 
  
 .quote-section { 
-    padding: 120px 0; 
+    padding: 35px 0; 
     background: var(--cream); 
 } 
  
@@ -654,7 +654,7 @@ h2 i {
  
 .cta { 
     background: var(--green); 
-    padding: 80px 0; 
+    padding: 40px 0; 
     color: white; 
 } 
  
@@ -700,7 +700,7 @@ body.contact-page {
 }
 
 .contact { 
-    padding: 120px 0; 
+    padding: 35px 0; 
     background: white; 
 } 
  
@@ -836,7 +836,7 @@ footer {
     .about,
     .quote-section,
     .contact {
-        padding: 88px 0;
+        padding: 25px 0;
     }
 
     .services-grid,
