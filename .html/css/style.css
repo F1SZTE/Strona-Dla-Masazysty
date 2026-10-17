@@ -71,6 +71,10 @@ a {
     color: var(--green);
 }
 
+.navbar .logo {
+    display: none;
+}
+
 .logo span span {
     font-style: italic;
 }
@@ -490,6 +494,150 @@ h2 i {
     font-weight: 600;
 }
 
+.service-groups {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    margin-top: 50px;
+}
+
+.service-group {
+    padding: 26px;
+    border-radius: 14px;
+}
+
+.service-group--massage {
+    background: #f3f7ed;
+}
+
+.service-group--manual {
+    background: #f2f5f7;
+}
+
+.service-group--exercise {
+    background: #f8f2e9;
+}
+
+.service-group--massage .service-group-title,
+.service-group--manual .service-group-title,
+.service-group--exercise .service-group-title {
+    justify-content: center;
+}
+
+.service-group--massage .service-group-grid .service-card,
+.service-group--manual .service-group-grid .service-card,
+.service-group--exercise .service-group-grid .service-card,
+.service-group--massage .service-group-grid .service-card-2,
+.service-group--manual .service-group-grid .service-card-2,
+.service-group--exercise .service-group-grid .service-card-2 {
+    align-items: center;
+    text-align: center;
+}
+
+.service-group--massage .service-group-grid,
+.service-group--manual .service-group-grid,
+.service-group--exercise .service-group-grid {
+    grid-template-columns: minmax(0, 1fr);
+}
+
+.service-group--physical {
+    grid-column: 1 / -1;
+    background: #eaf3fb;
+    border: 1px solid #d5e5f4;
+    border-radius: 22px;
+}
+
+.service-group-title {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 18px;
+    color: var(--green-dark);
+    font-family: var(--serif);
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.service-group-title span {
+    color: var(--green);
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.service-group--physical .service-group-title {
+    color: #174b7a;
+}
+
+.service-group-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.service-group-grid .service-card,
+.service-group-grid .service-card-2 {
+    min-height: 0;
+    padding: 30px;
+    border: 1px solid rgba(23, 75, 122, .12);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, .88);
+    text-align: left;
+}
+
+.service-group-grid .service-card-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.service-group-grid .service-card-2 h4,
+.service-group-grid .service-card h4 {
+    margin: 0 0 13px;
+    color: var(--green-dark);
+    font-family: var(--serif);
+    font-size: 21px;
+    font-weight: 500;
+}
+
+.service-group-grid .service-card-2 a,
+.service-group-grid .service-card a {
+    margin-top: auto;
+    padding-top: 18px;
+    color: var(--green);
+}
+
+.service-group-grid .service-card-2 .service-number,
+.service-group-grid .service-card .service-number {
+    top: 14px;
+    right: 16px;
+    color: #71879b;
+}
+
+.service-group-grid .service-card-2 h4 {
+    padding-right: 12px;
+}
+
+.service-group-grid .service-card-2 p {
+    color: var(--muted);
+}
+
+.service-details-list {
+    display: grid;
+    gap: 6px;
+    margin: 0;
+    padding-left: 18px;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.55;
+}
+
+.service-group-grid .service-card-2 .service-details-list {
+    color: var(--muted);
+}
+
 .service-card-2 .service-number {
     font-size: 10px;
     color: #ffffff;
@@ -863,6 +1011,18 @@ footer {
         gap: 16px;
     }
 
+    .service-group-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .service-groups {
+        grid-template-columns: 1fr;
+    }
+
+    .service-group--physical {
+        grid-column: auto;
+    }
+
     .partner-list {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
@@ -910,6 +1070,10 @@ footer {
 
     .logo {
         font-size: 21px;
+    }
+
+    .navbar .logo {
+        display: flex;
     }
 
     .logo-icon {
@@ -993,8 +1157,21 @@ footer {
     .reviews,
     .about-grid,
     .contact-grid,
-    .contact-details {
+    .contact-details,
+    .service-group-grid {
         grid-template-columns: 1fr;
+    }
+
+    .service-group {
+        padding: 20px;
+    }
+
+    .service-group--physical {
+        border-radius: 18px;
+    }
+
+    .service-group-title {
+        font-size: 22px;
     }
 
     .services-grid-2 {
