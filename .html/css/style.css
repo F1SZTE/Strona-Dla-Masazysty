@@ -2024,3 +2024,25 @@ body.home-page .home-hero .hero-image {
         object-position: center;
     }
 }
+
+/* Klikalny obszar przycisku „Umów wizytę” w grafice banera. */
+body.home-page .home-hero-booking-link {
+    position: absolute;
+    z-index: 1;
+    left: 4.8%;
+    top: 63.5%;
+    width: 18.7%;
+    height: 11.2%;
+    border-radius: 999px;
+}
+
+body.home-page .home-hero-booking-link:focus-visible {
+    outline: 3px solid #082d77;
+    outline-offset: 3px;
+}
+/* Tekst we wszystkich listach wskazań w oknach zabiegów wyrównany do lewej. */
+body.home-page .service-info-dialog-copy ul {
+    margin: 0 0 14px;
+    padding-left: 1.25em;
+    text-align: left;
+}
