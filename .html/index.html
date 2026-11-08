@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="home-page">
 
 <header class="navbar">
     <div class="container nav-inner">
@@ -20,18 +20,19 @@
             <img class="logo-image" src="images/logo-masaz-aj.webp" alt="Fizjoterapia Mokotowska">
         </a>
 
-        <nav>
-            <a href="uslugi.html">Nasze Usługi</a>
-            <a href="o-mnie.html">O nas</a>
-            <a href="kontakt.html">Kontakt</a>
-        </nav>
+        <div class="nav-panel" id="primary-navigation">
+            <nav aria-label="Nawigacja główna">
+                <a href="uslugi.html">Nasze Usługi</a>
+                <a href="o-mnie.html">O nas</a>
+                <a href="kontakt.html">Kontakt</a>
+            </nav>
 
-        <a href="kontakt.html" class="nav-button">
-            Umów wizytę
-        </a>
+            <a href="kontakt.html" class="nav-button">
+                Umów wizytę
+            </a>
+        </div>
 
-        <button class="menu-button">☰</button>
-
+        <button class="menu-button" type="button" aria-label="Otwórz menu" aria-expanded="false" aria-controls="primary-navigation">☰</button>
     </div>
 </header>
 
@@ -40,7 +41,7 @@
 
 <section class="hero home-hero">
 
-    <img class="hero-image" src="images/head.webp" alt="Fizjoterapia Mokotowska: profesjonalna fizjoterapia i masaż leczniczy w gabinecie">
+    <img class="hero-image" src="images/hero-banner-v2.png" alt="Fizjoterapia i masaż leczniczy — umów wizytę. Gabinet fizjoterapii z indywidualnym podejściem, doświadczeniem i skuteczną terapią.">
 
 </section>
 
@@ -61,17 +62,11 @@
             </h1>
 
             <p>
-                Od 40 lat pomagamy pacjentom zmniejszać ból,
-                odzyskiwać sprawność i wracać do swobodnego
-                funkcjonowania. Łączymy wieloletnią praktykę
-                z indywidualnym podejściem do każdej osoby.
+                Od lat pomagamy pacjentom zmniejszać ból, odzyskiwać
+                sprawność i wracać do codziennych aktywności.
+                Każdą terapię dobieramy indywidualnie, z troską
+                o Twoje potrzeby i długofalowe efekty.
             </p>
-
-            <p>
-                Każdą terapię dobieramy do konkretnego problemu,
-                potrzeb i możliwości pacjenta.
-            </p>
-
             <a href="o-mnie.html" class="text-link">
                 Poznaj naszą historię →
             </a>
@@ -111,35 +106,46 @@
                 metody terapii pozwalają nam dopasować leczenie
                 do potrzeb każdego pacjenta.
             </p>
+            <p class="offer-plus-hint">Kliknij „+” na wybranej karcie, aby poznać szczegóły zabiegu.</p>
+
         </div>
 
 
         <div class="service-groups" id="oferta">
             <section class="service-group service-group--massage">
-                <h3 class="service-group-title"><span>01</span> Masaż leczniczy</h3>
+                
                 <div class="service-group-grid">
                     <article class="service-card-2">
-                        <p>Indywidualnie dobrany zabieg wspierający pracę z mięśniami i tkankami.</p>
+                        <img class="service-icon-reference" src="images/service-massage-reference.png" alt="" aria-hidden="true">
+                        <button class="service-info-trigger" type="button" data-service-title="Masaż leczniczy" data-service-content="service-copy-massage" aria-label="Więcej informacji: Masaż leczniczy"><span aria-hidden="true">+</span></button>
+                        <h4>Masaż leczniczy</h4>
+                        <p class="service-card-summary">Masaż dopasowany do potrzeb i aktualnego stanu pacjenta.</p>
                         <a href="uslugi.html">Dowiedz się więcej →</a>
                     </article>
                 </div>
             </section>
 
             <section class="service-group service-group--manual">
-                <h3 class="service-group-title"><span>02</span> Terapia manualna</h3>
+                
                 <div class="service-group-grid">
                     <article class="service-card-2">
-                        <p>Indywidualnie dobrane techniki pracy z układem ruchu.</p>
+                        <img class="service-icon-reference" src="images/manual-therapy-icon.png" alt="" aria-hidden="true">
+                        <button class="service-info-trigger" type="button" data-service-title="Terapia manualna" data-service-content="service-copy-manual" aria-label="Więcej informacji: Terapia manualna"><span aria-hidden="true">+</span></button>
+                        <h4>Terapia manualna</h4>
+                        <p class="service-card-summary">Techniki manualne dobierane do potrzeb układu ruchu.</p>
                         <a href="uslugi.html">Dowiedz się więcej →</a>
                     </article>
                 </div>
             </section>
 
             <section class="service-group service-group--exercise">
-                <h3 class="service-group-title"><span>03</span> Ćwiczenia i wyciągi</h3>
+                
                 <div class="service-group-grid">
                     <article class="service-card-2">
-                        <p>Ćwiczenia i wyciągi dobierane do potrzeb oraz możliwości pacjenta.</p>
+                        <img class="service-icon-reference" src="images/service-exercise-reference.png" alt="" aria-hidden="true">
+                        <button class="service-info-trigger" type="button" data-service-title="Ćwiczenia i wyciągi" data-service-content="service-copy-exercise" aria-label="Więcej informacji: Ćwiczenia i wyciągi"><span aria-hidden="true">+</span></button>
+                        <h4>Ćwiczenia i wyciągi</h4>
+                        <p class="service-card-summary">Ćwiczenia i wyciągi dobierane do możliwości pacjenta.</p>
                         <a href="uslugi.html">Dowiedz się więcej →</a>
                     </article>
                 </div>
@@ -150,49 +156,58 @@
                 <div class="service-group-grid">
                     <article class="service-card-2">
                         <div class="service-number">01</div>
+                        <img class="service-icon-reference" src="images/service-laser-low-reference.png" alt="" aria-hidden="true">
+                        <button class="service-info-trigger" type="button" data-service-title="Laseroterapia niskoenergetyczna" data-service-content="service-copy-laser-low" aria-label="Więcej informacji: Laseroterapia niskoenergetyczna"><span aria-hidden="true">+</span></button>
                         <h4>Laseroterapia niskoenergetyczna</h4>
+                        <p class="service-card-summary">Laseroterapia z promieniowaniem o niskiej mocy.</p>
                         <a href="uslugi.html">Dowiedz się więcej →</a>
                     </article>
                     <article class="service-card-2">
                         <div class="service-number">02</div>
+                        <img class="service-icon-reference" src="images/service-laser-hil-reference.png" alt="" aria-hidden="true">
+                        <button class="service-info-trigger" type="button" data-service-title="Laseroterapia wysokoenergetyczna (HIL)" data-service-content="service-copy-laser-hil" aria-label="Więcej informacji: Laseroterapia wysokoenergetyczna (HIL)"><span aria-hidden="true">+</span></button>
                         <h4>Laseroterapia wysokoenergetyczna (HIL)</h4>
+                        <p class="service-card-summary">Laseroterapia wysokoenergetyczna z urządzeniem HIL.</p>
                         <a href="uslugi.html">Dowiedz się więcej →</a>
                     </article>
                     <article class="service-card-2">
                         <div class="service-number">03</div>
+                        <img class="service-icon-reference" src="images/service-ultrasound-reference.png" alt="" aria-hidden="true">
+                        <button class="service-info-trigger" type="button" data-service-title="Ultradźwięki" data-service-content="service-copy-ultrasound" aria-label="Więcej informacji: Ultradźwięki"><span aria-hidden="true">+</span></button>
                         <h4>Ultradźwięki</h4>
+                        <p class="service-card-summary">Zabieg fizykoterapeutyczny wykorzystujący ultradźwięki.</p>
                         <a href="uslugi.html">Dowiedz się więcej →</a>
                     </article>
                     <article class="service-card-2">
                         <div class="service-number">04</div>
+                        <img class="service-icon-reference" src="images/service-cryotherapy-reference.png" alt="" aria-hidden="true">
+                        <button class="service-info-trigger" type="button" data-service-title="Krioterapia miejscowa" data-service-content="service-copy-cryotherapy" aria-label="Więcej informacji: Krioterapia miejscowa"><span aria-hidden="true">+</span></button>
                         <h4>Krioterapia miejscowa</h4>
+                        <p class="service-card-summary">Miejscowe zastosowanie niskiej temperatury.</p>
                         <a href="uslugi.html">Dowiedz się więcej →</a>
                     </article>
                     <article class="service-card-2">
                         <div class="service-number">05</div>
+                        <img class="service-icon-reference" src="images/service-magnetotherapy-reference.png" alt="" aria-hidden="true">
+                        <button class="service-info-trigger" type="button" data-service-title="Magnetoterapia" data-service-content="service-copy-magnetotherapy" aria-label="Więcej informacji: Magnetoterapia"><span aria-hidden="true">+</span></button>
                         <h4>Magnetoterapia</h4>
-                        <ul class="service-details-list">
-                            <li>Magnetoterapia niskiej częstotliwości</li>
-                            <li>Magnetoterapia wysokiej częstotliwości (TERAPULS)</li>
-                        </ul>
+                        <p class="service-card-summary">Magnetoterapia o niskiej lub wysokiej częstotliwości, także z urządzeniem TERAPULS.</p>
                         <a href="uslugi.html">Dowiedz się więcej →</a>
                     </article>
                     <article class="service-card-2">
                         <div class="service-number">06</div>
+                        <img class="service-icon-reference" src="images/service-sollux-reference.png" alt="" aria-hidden="true">
+                        <button class="service-info-trigger" type="button" data-service-title="Lampa Sollux" data-service-content="service-copy-sollux" aria-label="Więcej informacji: Lampa Sollux"><span aria-hidden="true">+</span></button>
                         <h4>Lampa Sollux</h4>
+                        <p class="service-card-summary">Naświetlanie wybranego obszaru lampą Sollux.</p>
                         <a href="uslugi.html">Dowiedz się więcej →</a>
                     </article>
                     <article class="service-card-2">
                         <div class="service-number">07</div>
+                        <span class="service-icon-badge" aria-hidden="true"><svg viewBox="0 0 48 48" focusable="false"><path d="M24 4v7m0 26v7M4 24h7m26 0h7M10 10l5 5m18 18 5 5m0-28-5 5M15 33l-5 5"/><circle cx="24" cy="24" r="7"/></svg></span>
+                        <button class="service-info-trigger" type="button" data-service-title="Elektroterapia" data-service-content="service-copy-electrotherapy" aria-label="Więcej informacji: Elektroterapia"><span aria-hidden="true">+</span></button>
                         <h4>Elektroterapia</h4>
-                        <ul class="service-details-list">
-                            <li>Prądy TENS</li>
-                            <li>Prądy interferencyjne</li>
-                            <li>Prądy diadynamiczne (DD)</li>
-                            <li>Elektrostymulacje</li>
-                            <li>Jonoforeza</li>
-                            <li>Galwanizacja</li>
-                        </ul>
+                        <p class="service-card-summary">Zabieg z użyciem prądów aplikowanych przez elektrody.</p>
                         <a href="uslugi.html">Dowiedz się więcej →</a>
                     </article>
                 </div>
@@ -213,33 +228,28 @@
     <div class="container">
 
         <div class="partners-heading">
-            <span class="section-label">PARTNERZY MEDYCZNI</span>
+            <span class="section-label">WSPÓŁPRACUJEMY Z</span>
             <h2 id="partners-title">Współpracujemy z</h2>
         </div>
 
         <div class="partner-list">
             <div class="partner-logo">
-                <img src="https://zdrowie.pzu.pl/_fileserver/item/1501252" alt="Logo PZU Zdrowie">
-                <span class="partner-name">PZU Zdrowie</span>
+                <img src="images/pzu-logo.svg" alt="Logo PZU Zdrowie">
             </div>
             <div class="partner-logo">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/e/e2/INTER_Polska.jpg" alt="Logo INTER Polska">
-                <span class="partner-name">Inter Polska</span>
             </div>
             <div class="partner-logo">
-                <img src="https://polmed.pl/wp-content/uploads/2023/02/polmed_logo_RGB_SQUARE.png" alt="Logo POLMED">
-                <span class="partner-name">Polmed</span>
+                <img src="images/polmed-logo-local.png" alt="Logo POLMED">
             </div>
             <div class="partner-logo">
                 <img src="https://www.vigzdrowie.pl/wp-content/uploads/2026/02/cropped-logo_VIGZdrowie_RGB-208x55.png" alt="Logo VIG Zdrowie">
-                <span class="partner-name">VIG Zdrowie (Compensa)</span>
             </div>
             <div class="partner-logo">
                 <span class="partner-name">HMS</span>
             </div>
             <div class="partner-logo">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/d/d1/Signal_Iduna_logo.svg" alt="Logo SIGNAL IDUNA">
-                <span class="partner-name">Signal Iduna</span>
             </div>
         </div>
 
@@ -264,9 +274,9 @@
         </h2>
 
         <p>
-            Ból, kontuzja czy ograniczona ruchomość nie muszą
-            być częścią Twojej codzienności. Wspólnie znajdziemy
-            źródło problemu i dobierzemy odpowiednią terapię.
+            Niezależnie od wieku czy poziomu aktywności,
+            dobieramy terapię tak, aby wspierała Twój powrót
+            do zdrowia i codziennej sprawności.
         </p>
 
         <div class="check-list">
@@ -294,7 +304,7 @@
         </div>
 
         <a href="kontakt.html" class="button button-primary">
-            Poznaj nas
+            Umów wizytę →
         </a>
 
     </div>
@@ -308,7 +318,7 @@
     <div class="container cta-content">
 
         <div>
-            <span>MASZ PYTANIA?</span>
+            <span>NASZ CEL</span>
 
             <h2>
                 Zrób pierwszy krok
@@ -317,7 +327,7 @@
         </div>
 
         <a href="kontakt.html" class="button button-light">
-            Umów konsultację
+            Skontaktuj się z nami →
         </a>
 
     </div>
@@ -358,6 +368,120 @@
 
 </footer>
 
+
+
+<dialog class="service-info-dialog" id="service-info-dialog" aria-labelledby="service-dialog-title">
+    <div class="service-dialog-topline">
+        <span>INFORMACJE O ZABIEGU</span>
+        <button class="service-dialog-close" type="button" aria-label="Zamknij okno">×</button>
+    </div>
+    <h2 id="service-dialog-title"></h2>
+    <div class="service-info-dialog-copy" id="service-dialog-description"></div>
+    <a href="kontakt.html" class="button button-primary">Umów wizytę →</a>
+</dialog>
+
+<template id="service-copy-massage">
+    <p>Masaż leczniczy to indywidualnie dobrana forma terapii manualnej, która może pomóc zmniejszyć napięcie mięśniowe, poprawić komfort ruchu i wesprzeć powrót do codziennej aktywności. Zabieg dobieramy do aktualnych dolegliwości, kondycji oraz potrzeb pacjenta.</p>
+    <h3>Kiedy warto rozważyć masaż leczniczy?</h3>
+    <p>Masaż może być pomocny przy napięciu mięśni, dolegliwościach związanych z pracą siedzącą, przeciążeniach po wysiłku oraz ograniczonej ruchomości. Stosujemy go również jako element szerszego procesu fizjoterapii, gdy celem jest rozluźnienie tkanek i poprawa komfortu funkcjonowania.</p>
+    <h3>Jak przebiega wizyta?</h3>
+    <p>Każda wizyta rozpoczyna się od krótkiej rozmowy o dolegliwościach i oczekiwaniach. Na tej podstawie dobieramy obszar pracy, techniki oraz intensywność masażu. Terapia może obejmować okolice kręgosłupa, barków, karku, kończyn lub inne miejsca wymagające wsparcia.</p>
+    <h3>Indywidualne podejście</h3>
+    <p>Nie wykonujemy masażu według jednego, powtarzalnego schematu. Zakres terapii jest dostosowany do aktualnego stanu pacjenta i może być połączony z elementami terapii manualnej, ćwiczeniami lub zaleceniami do pracy w domu.</p>
+    <p><strong>Chcesz sprawdzić, czy masaż leczniczy będzie odpowiedni w Twoim przypadku? Umów wizytę lub skontaktuj się z gabinetem.</strong></p>
+</template>
+<template id="service-copy-manual">
+    <p>Terapia manualna obejmuje indywidualnie dobrane techniki pracy fizjoterapeuty z mięśniami, stawami i innymi strukturami układu ruchu. Dobór metod poprzedzają rozmowa i ocena funkcjonalna.</p>
+    <h3>Kiedy warto ją rozważyć?</h3>
+    <p>Może zostać włączona do planu pracy z ograniczeniem ruchu lub dolegliwościami układu ruchu, jeśli po ocenie fizjoterapeuta uzna ją za właściwą. W zależności od potrzeb może być łączona z ćwiczeniami i wskazówkami do samodzielnej aktywności.</p>
+    <h3>Jak przebiega wizyta?</h3>
+    <p>Fizjoterapeuta pyta o Twoje potrzeby, ocenia ruch i wyjaśnia proponowany plan. Następnie dobiera techniki oraz ich intensywność, informując, czego możesz się spodziewać podczas pracy.</p>
+    <h3>Indywidualne podejście</h3>
+    <p>Nie stosujemy jednego zestawu technik dla wszystkich. Metody są dobierane do wyniku oceny, a plan można zmienić, jeśli pojawi się taka potrzeba. Możesz w każdej chwili zgłosić swoje odczucia lub pytania.</p>
+    <p><strong>Chcesz sprawdzić, czy terapia manualna będzie odpowiednia w Twoim przypadku? Umów wizytę lub skontaktuj się z gabinetem.</strong></p>
+</template>
+<template id="service-copy-exercise">
+    <p>Ćwiczenia dobieramy do celu terapii, aktualnych możliwości i wyniku oceny funkcjonalnej. Jeśli jest to uzasadnione, plan wizyty może również uwzględniać pracę z wykorzystaniem wyciągu.</p>
+    <h3>Kiedy warto je rozważyć?</h3>
+    <p>Indywidualny program może być pomocny, gdy celem jest stopniowa praca nad ruchem, siłą, koordynacją lub sprawnością potrzebną w codziennych czynnościach. Rodzaj i poziom trudności ćwiczeń ustala fizjoterapeuta.</p>
+    <h3>Jak przebiega wizyta?</h3>
+    <p>Fizjoterapeuta pokazuje ćwiczenia, objaśnia ich wykonanie i sprawdza technikę. Jeśli w planie pojawia się wyciąg, wcześniej wyjaśnia jego rolę i sposób użycia. Przebieg jest dostosowywany do Twojej reakcji i samopoczucia.</p>
+    <h3>Indywidualne podejście</h3>
+    <p>Zakres, tempo i trudność ćwiczeń mogą się zmieniać w trakcie terapii. Otrzymujesz wskazówki dopasowane do swoich możliwości, a ćwiczenia domowe są proponowane wtedy, gdy pasują do ustalonego planu.</p>
+    <p><strong>Chcesz ustalić, jaki plan ćwiczeń będzie dla Ciebie odpowiedni? Umów wizytę lub skontaktuj się z gabinetem.</strong></p>
+</template>
+<template id="service-copy-laser-low">
+    <p>Laseroterapia niskoenergetyczna to zabieg fizykoterapeutyczny wykorzystujący promieniowanie laserowe o niskiej mocy. Obszar zabiegu i parametry ustala fizjoterapeuta z uwzględnieniem używanego urządzenia.</p>
+    <h3>Kiedy warto ją rozważyć?</h3>
+    <p>Może zostać zaproponowana jako jedna z metod fizykoterapii po rozmowie i ocenie potrzeb. O jej przydatności nie decyduje sama nazwa dolegliwości — fizjoterapeuta bierze pod uwagę Twój stan zdrowia, cel terapii oraz ewentualne przeciwwskazania.</p>
+    <h3>Jak przebiega zabieg?</h3>
+    <p>Przed rozpoczęciem fizjoterapeuta wyjaśnia przebieg, przygotowuje wybrany obszar i ustawia urządzenie. Zabieg oraz środki ochrony oczu są prowadzone zgodnie z procedurą dla używanego sprzętu.</p>
+    <h3>Indywidualne podejście</h3>
+    <p>Przed kwalifikacją możesz opowiedzieć o swoim stanie zdrowia i zapytać o każdy etap. Jeśli ta metoda nie będzie odpowiednia, fizjoterapeuta omówi inne możliwe elementy planu.</p>
+    <p><strong>Chcesz dowiedzieć się, czy laseroterapia niskoenergetyczna będzie odpowiednia w Twoim przypadku? Umów wizytę lub skontaktuj się z gabinetem.</strong></p>
+</template>
+<template id="service-copy-laser-hil">
+    <p>Laseroterapia wysokoenergetyczna (HIL) wykorzystuje urządzenie emitujące promieniowanie laserowe o wysokiej energii. Ustawienia, obszar i sposób prowadzenia zabiegu dobiera fizjoterapeuta.</p>
+    <h3>Kiedy warto ją rozważyć?</h3>
+    <p>HIL może być rozważana jako element fizykoterapii po ocenie potrzeb i stanu zdrowia. Przed kwalifikacją fizjoterapeuta sprawdza, czy ta metoda pasuje do ustalonego celu i czy nie ma przeciwwskazań.</p>
+    <h3>Jak przebiega zabieg?</h3>
+    <p>Fizjoterapeuta omawia przebieg, przygotowuje wybrany obszar i konfiguruje urządzenie. Zabieg oraz stosowane zabezpieczenia, w tym ochronę oczu, są zgodne z procedurą dla używanego sprzętu.</p>
+    <h3>Indywidualne podejście</h3>
+    <p>Dobór parametrów i zakresu zabiegu zależy od indywidualnej kwalifikacji. W razie pytań możesz omówić z fizjoterapeutą swoje obawy przed rozpoczęciem.</p>
+    <p><strong>Chcesz sprawdzić, czy HIL będzie odpowiednie w Twoim przypadku? Umów wizytę lub skontaktuj się z gabinetem.</strong></p>
+</template>
+<template id="service-copy-ultrasound">
+    <p>Zabieg ultradźwiękami wykorzystuje fale akustyczne o częstotliwości poza zakresem słyszalnym. Fizjoterapeuta prowadzi głowicę urządzenia na wyznaczonym obszarze i ustala parametry zabiegu.</p>
+    <h3>Kiedy warto je rozważyć?</h3>
+    <p>Ultradźwięki mogą być zaproponowane jako jedna z metod fizykoterapii, jeśli po ocenie fizjoterapeuta uzna je za odpowiednie. Nie każda dolegliwość ani sytuacja zdrowotna kwalifikuje się do tej metody.</p>
+    <h3>Jak przebiega zabieg?</h3>
+    <p>Fizjoterapeuta wyjaśnia kolejne etapy, przygotowuje skórę i dobiera ustawienia urządzenia. W trakcie zabiegu głowica jest prowadzona po wskazanej okolicy zgodnie z przyjętą procedurą.</p>
+    <h3>Indywidualne podejście</h3>
+    <p>Przed zabiegiem omawiane są Twoje potrzeby i ważne informacje o stanie zdrowia. Jeśli ultradźwięki nie będą właściwym wyborem, można ustalić inny sposób postępowania.</p>
+    <p><strong>Chcesz ustalić, czy ultradźwięki będą odpowiednie w Twoim przypadku? Umów wizytę lub skontaktuj się z gabinetem.</strong></p>
+</template>
+<template id="service-copy-cryotherapy">
+    <p>Krioterapia miejscowa polega na krótkim zastosowaniu niskiej temperatury na wybranym obszarze. Dokładna metoda i parametry zależą od używanego urządzenia oraz planu fizjoterapii.</p>
+    <h3>Kiedy warto ją rozważyć?</h3>
+    <p>O możliwości zastosowania zimna decyduje fizjoterapeuta po rozmowie i ocenie stanu zdrowia. Metoda nie jest odpowiednia dla każdego, dlatego przed zabiegiem omawiane są istotne informacje i ewentualne przeciwwskazania.</p>
+    <h3>Jak przebiega zabieg?</h3>
+    <p>Fizjoterapeuta wyjaśnia, jak będzie wyglądało miejscowe chłodzenie, przygotowuje obszar i kontroluje przebieg zgodnie z procedurą. Jeśli odczuwasz nadmierny dyskomfort, poinformuj o tym od razu.</p>
+    <h3>Indywidualne podejście</h3>
+    <p>Obszar oraz sposób przeprowadzenia zabiegu są ustalane indywidualnie. Przed wizytą możesz zgłosić swoje pytania, a podczas zabiegu pozostajesz w kontakcie z fizjoterapeutą.</p>
+    <p><strong>Chcesz sprawdzić, czy krioterapia miejscowa będzie odpowiednia w Twoim przypadku? Umów wizytę lub skontaktuj się z gabinetem.</strong></p>
+</template>
+<template id="service-copy-magnetotherapy">
+    <p>W gabinecie dostępna jest magnetoterapia niskiej częstotliwości oraz zabieg z użyciem urządzenia wysokiej częstotliwości TERAPULS. Są to różne metody fizykoterapii, a ich ustawienia dobiera się do konkretnego zabiegu.</p>
+    <h3>Kiedy warto ją rozważyć?</h3>
+    <p>O tym, czy magnetoterapia może wejść w skład planu, decyduje fizjoterapeuta po rozmowie i ocenie potrzeb. Przed rozpoczęciem sprawdzane są również informacje o stanie zdrowia oraz ewentualne przeciwwskazania.</p>
+    <h3>Jak przebiega zabieg?</h3>
+    <p>Fizjoterapeuta wyjaśnia, która metoda została zaplanowana, przygotowuje stanowisko i ustawia urządzenie. Przebieg zależy od wybranego rodzaju zabiegu i jest prowadzony zgodnie z procedurą sprzętu.</p>
+    <h3>Indywidualne podejście</h3>
+    <p>Rodzaj metody i jej parametry nie są dobierane automatycznie. Jeśli masz wszczepione urządzenie medyczne lub inne ważne informacje o zdrowiu, powiedz o tym fizjoterapeucie przed kwalifikacją.</p>
+    <p><strong>Chcesz dowiedzieć się, czy magnetoterapia będzie odpowiednia w Twoim przypadku? Umów wizytę lub skontaktuj się z gabinetem.</strong></p>
+</template>
+<template id="service-copy-sollux">
+    <p>Zabieg lampą Sollux polega na naświetlaniu wybranego obszaru z użyciem urządzenia dostępnego w gabinecie. Fizjoterapeuta ustala sposób wykonania zgodnie z celem wizyty i procedurą sprzętu.</p>
+    <h3>Kiedy warto go rozważyć?</h3>
+    <p>Naświetlanie może być rozważone jako element fizykoterapii po rozmowie i ocenie potrzeb. Fizjoterapeuta uwzględnia stan zdrowia, obszar zabiegu oraz możliwe przeciwwskazania.</p>
+    <h3>Jak przebiega zabieg?</h3>
+    <p>Przed rozpoczęciem omawiany jest przebieg i przygotowywane jest stanowisko. Ustawienie lampy, czas naświetlania oraz potrzebne zabezpieczenia ustala fizjoterapeuta zgodnie z procedurą urządzenia.</p>
+    <h3>Indywidualne podejście</h3>
+    <p>Zakres zabiegu dopasowujemy do indywidualnej kwalifikacji. Zgłoś fizjoterapeucie pytania, wrażliwość na ciepło lub inne informacje, które mogą mieć znaczenie dla komfortu i bezpieczeństwa.</p>
+    <p><strong>Chcesz sprawdzić, czy zabieg lampą Sollux będzie odpowiedni w Twoim przypadku? Umów wizytę lub skontaktuj się z gabinetem.</strong></p>
+</template>
+<template id="service-copy-electrotherapy">
+    <p>Elektroterapia wykorzystuje prąd przekazywany przez elektrody umieszczone na skórze. W zależności od kwalifikacji zabieg może obejmować prądy TENS, interferencyjne lub diadynamiczne, elektrostymulację, jonoforezę albo galwanizację.</p>
+    <h3>Kiedy warto ją rozważyć?</h3>
+    <p>Dobór rodzaju prądu zależy od celu terapii, oceny fizjoterapeuty i informacji o stanie zdrowia. Nie każda metoda będzie odpowiednia dla każdej osoby, dlatego przed zabiegiem sprawdzane są również ewentualne przeciwwskazania.</p>
+    <h3>Jak przebiega zabieg?</h3>
+    <p>Fizjoterapeuta wyjaśnia wybrany rodzaj zabiegu, przygotowuje skórę i umieszcza elektrody. Podczas zabiegu możesz odczuwać mrowienie lub pracę mięśni, zależnie od metody. Zgłoś fizjoterapeucie nadmierny dyskomfort.</p>
+    <h3>Indywidualne podejście</h3>
+    <p>Parametry są ustawiane dla konkretnej osoby i zabiegu. Przed kwalifikacją poinformuj fizjoterapeutę o ważnych kwestiach zdrowotnych, w tym o wszczepionych urządzeniach medycznych.</p>
+    <p><strong>Chcesz sprawdzić, który rodzaj elektroterapii może być dla Ciebie odpowiedni? Umów wizytę lub skontaktuj się z gabinetem.</strong></p>
+</template>
+
+<script src="../.js/script.js" defer></script>
 
 </body>
 </html>

@@ -56,6 +56,7 @@ a {
 }
 
 .nav-inner {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -103,6 +104,11 @@ a {
     place-items: center;
     font-family: var(--sans);
     font-size: 17px;
+}
+
+.nav-panel {
+    display: flex;
+    align-items: center;
 }
 
 nav {
@@ -1232,3 +1238,789 @@ footer {
         gap: 10px;
     }
 }   
+@media (max-width: 900px) {
+    .navbar .logo {
+        display: flex;
+    }
+
+    .nav-panel {
+        display: none;
+    }
+
+    .navbar.is-menu-open .nav-panel {
+        position: absolute;
+        top: calc(100% + 12px);
+        right: 0;
+        left: 0;
+        z-index: 20;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 18px;
+        padding: 20px;
+        border: 1px solid #d5e4f1;
+        border-radius: 12px;
+        background: #fff;
+        box-shadow: 0 16px 40px rgba(16, 43, 73, .16);
+    }
+
+    .navbar.is-menu-open .nav-panel nav {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+        margin: 0;
+    }
+
+    .navbar.is-menu-open .nav-panel .nav-button {
+        display: flex;
+        width: 100%;
+    }
+
+    .menu-button {
+        width: 44px;
+        height: 44px;
+        cursor: pointer;
+    }
+}
+/* HOME PAGE — layout inspired by the supplied reference */
+body.home-page .navbar {
+    display: flex;
+}
+
+body.home-page .navbar .logo {
+    display: flex;
+}
+
+body.home-page .home-hero {
+    height: clamp(180px, 23vw, 300px);
+    overflow: hidden;
+    background: #e9f3fb;
+}
+
+body.home-page .home-hero .hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: right center;
+    transform: scale(2.1);
+    transform-origin: right center;
+}
+
+body.home-page .about {
+    padding: 22px 0 30px;
+}
+
+body.home-page .about-grid {
+    width: min(1080px, calc(100% - 100px));
+    grid-template-columns: 1.05fr 1fr;
+    gap: 52px;
+}
+
+body.home-page .about .section-label {
+    display: none;
+}
+
+body.home-page .about-text h1 {
+    margin: 0 0 15px;
+    font-size: clamp(30px, 3.8vw, 46px);
+    line-height: 1.12;
+}
+
+body.home-page .about-text p {
+    max-width: 410px;
+    font-size: 13px;
+    line-height: 1.65;
+}
+
+body.home-page .about-text p + p {
+    margin-top: 0;
+}
+
+body.home-page .about .text-link {
+    margin-top: 16px;
+    font-size: 12px;
+}
+
+body.home-page .about-box {
+    aspect-ratio: 1.15;
+    border-radius: 6px;
+}
+
+body.home-page .partners {
+    padding: 18px 0 20px;
+    background: #edf6ff;
+}
+
+body.home-page .partners-heading {
+    margin-bottom: 8px;
+}
+
+body.home-page .partners-heading .section-label {
+    font-size: 9px;
+    letter-spacing: 3px;
+}
+
+body.home-page .partners-heading h2 {
+    display: none;
+}
+
+body.home-page .partner-list {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 8px;
+}
+
+body.home-page .partner-logo {
+    min-height: 58px;
+    padding: 4px;
+    gap: 3px;
+}
+
+body.home-page .partner-logo img {
+    width: 112px;
+    height: 34px;
+}
+
+body.home-page .partner-name {
+    font-size: 10px;
+}
+
+body.home-page .split-section {
+    min-height: clamp(330px, 42vw, 520px);
+}
+
+body.home-page .split-image {
+    background-position: center;
+}
+
+body.home-page .split-content {
+    padding: 38px clamp(28px, 5vw, 76px);
+    background: #fff;
+}
+
+body.home-page .split-content h2 {
+    margin: 12px 0 16px;
+    font-size: clamp(32px, 3.5vw, 46px);
+    line-height: 1.08;
+}
+
+body.home-page .split-content p {
+    font-size: 13px;
+    line-height: 1.65;
+}
+
+body.home-page .check-list {
+    margin: 18px 0 20px;
+    gap: 8px;
+}
+
+body.home-page .check-list div {
+    gap: 10px;
+    font-size: 12px;
+}
+
+body.home-page .check-list span {
+    width: 19px;
+    height: 19px;
+    flex: 0 0 19px;
+}
+
+body.home-page .split-content .button {
+    min-height: 42px;
+    max-width: 190px;
+}
+
+body.home-page .cta {
+    position: relative;
+    overflow: hidden;
+    padding: 25px 0;
+}
+
+body.home-page .cta::before,
+body.home-page .cta::after {
+    content: "";
+    position: absolute;
+    top: -104px;
+    right: 8%;
+    width: 300px;
+    height: 300px;
+    border: 1px solid rgba(255, 255, 255, .14);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+body.home-page .cta::after {
+    top: -72px;
+    right: 12%;
+    width: 230px;
+    height: 230px;
+}
+
+body.home-page .cta-content {
+    position: relative;
+    z-index: 1;
+    width: min(1080px, calc(100% - 100px));
+}
+
+body.home-page .cta h2 {
+    margin-top: 8px;
+    font-size: clamp(31px, 3.5vw, 44px);
+    line-height: 1.08;
+}
+
+body.home-page .cta .button-light {
+    min-height: 42px;
+}
+
+@media (max-width: 900px) {
+    body.home-page .about-grid {
+        gap: 38px;
+    }
+
+    body.home-page .partner-list {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+    }
+
+    body.home-page .split-section {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        min-height: 0;
+    }
+
+    body.home-page .split-image {
+        min-height: 0;
+    }
+
+    body.home-page .split-content {
+        padding: 32px clamp(20px, 4vw, 44px);
+    }
+
+    body.home-page .cta-content {
+        align-items: center;
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 600px) {
+    body.home-page .home-hero {
+        height: 190px;
+    }
+
+    body.home-page .about {
+        padding: 38px 0;
+    }
+
+    body.home-page .about-grid {
+        width: calc(100% - 36px);
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    body.home-page .about-text h1 {
+        font-size: 34px;
+    }
+
+    body.home-page .about-box {
+        aspect-ratio: 1.25;
+    }
+
+    body.home-page .partner-list {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    body.home-page .split-section {
+        grid-template-columns: 1fr;
+    }
+
+    body.home-page .split-image {
+        min-height: 260px;
+    }
+
+    body.home-page .split-content {
+        padding: 42px 24px;
+    }
+
+    body.home-page .cta-content {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+/* NASZA OFERTA — pastel service cards and info popups */
+body.home-page .service-group--massage,
+body.home-page .service-group--manual,
+body.home-page .service-group--exercise {
+    padding: 0;
+    background: transparent;
+}
+
+body.home-page .service-group--massage .service-group-grid .service-card-2 {
+    min-height: 290px;
+    border-color: #d6e7fa;
+    background: #f4f9ff;
+}
+
+body.home-page .service-group--manual .service-group-grid .service-card-2 {
+    min-height: 290px;
+    border-color: #f0dfcd;
+    background: #fff9f2;
+}
+
+body.home-page .service-group--exercise .service-group-grid .service-card-2 {
+    min-height: 290px;
+    border-color: #d8ece5;
+    background: #f3faf7;
+}
+
+body.home-page .service-group--physical {
+    padding: 26px 0 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+}
+
+body.home-page .service-group--physical .service-group-grid .service-card-2 {
+    min-height: 174px;
+    border-color: #d8e8f7;
+    border-radius: 10px;
+    background: #f5faff;
+    box-shadow: 0 5px 18px rgba(27, 90, 145, .035);
+}
+
+body.home-page .service-group--physical .service-group-grid .service-card-2:nth-child(3n + 2) {
+    border-color: #f0e2d1;
+    background: #fffaf4;
+}
+
+body.home-page .service-group--physical .service-group-grid .service-card-2:nth-child(3n) {
+    border-color: #d8ece5;
+    background: #f4faf7;
+}
+
+body.home-page .service-group-grid .service-card-2 {
+    position: relative;
+    border-radius: 10px;
+    transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+}
+
+body.home-page .service-group-grid .service-card-2:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(23, 75, 122, .1);
+}
+
+body.home-page .service-info-trigger {
+    position: absolute;
+    z-index: 2;
+    top: 12px;
+    right: 12px;
+    display: grid;
+    width: 32px;
+    height: 32px;
+    place-items: center;
+    border: 1px solid rgba(36, 104, 169, .35);
+    border-radius: 50%;
+    background: #fff;
+    color: var(--green);
+    font: 400 23px/1 var(--sans);
+    cursor: pointer;
+    transition: background .2s ease, color .2s ease, transform .2s ease;
+}
+
+body.home-page .service-info-trigger:hover {
+    transform: rotate(90deg);
+    background: var(--green);
+    color: #fff;
+}
+
+body.home-page .service-info-trigger:focus-visible,
+body.home-page .service-dialog-close:focus-visible {
+    outline: 3px solid rgba(36, 104, 169, .3);
+    outline-offset: 3px;
+}
+
+body.home-page .service-group--physical .service-number {
+    right: 52px;
+}
+
+body.home-page .service-group--physical .service-card-2 h4 {
+    padding-right: 38px;
+}
+
+body.home-page .service-info-dialog {
+    width: min(600px, calc(100% - 32px));
+    max-width: 600px;
+    padding: 28px;
+    border: 1px solid #d5e4f1;
+    border-radius: 14px;
+    background: #fff;
+    color: var(--text);
+    box-shadow: 0 24px 70px rgba(16, 43, 73, .25);
+}
+
+body.home-page .service-info-dialog::backdrop {
+    background: rgba(16, 43, 73, .48);
+    backdrop-filter: blur(3px);
+}
+
+body.home-page .service-dialog-topline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 20px;
+    color: var(--green);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+body.home-page .service-dialog-close {
+    display: grid;
+    width: 34px;
+    height: 34px;
+    flex: 0 0 34px;
+    place-items: center;
+    border: 1px solid #d5e4f1;
+    border-radius: 50%;
+    background: #f5faff;
+    color: var(--green-dark);
+    font: 400 23px/1 var(--sans);
+    cursor: pointer;
+}
+
+body.home-page .service-info-dialog h2 {
+    margin: 0 0 12px;
+    color: var(--green-dark);
+    font: 500 28px/1.18 var(--serif);
+}
+
+body.home-page .service-info-dialog-copy {
+    margin: 0 0 22px;
+    color: var(--muted);
+    font: 400 15px/1.7 var(--sans);
+}
+
+body.home-page .service-info-dialog-copy p {
+    margin: 0 0 14px;
+}
+
+body.home-page .service-info-dialog-copy p:last-child {
+    margin-bottom: 0;
+}
+
+body.home-page .service-info-dialog-copy h3 {
+    margin: 18px 0 7px;
+    color: var(--green-dark);
+    font: 500 20px/1.25 var(--serif);
+}
+
+body.home-page .service-info-dialog-copy strong {
+    color: var(--green-dark);
+    font-weight: 700;
+}
+
+body.home-page .service-info-dialog .button {
+    min-height: 44px;
+}
+
+@media (max-width: 600px) {
+    body.home-page .service-group--physical {
+        padding-top: 22px;
+    }
+
+    body.home-page .service-info-dialog {
+        padding: 22px;
+    }
+
+    body.home-page .service-info-dialog h2 {
+        font-size: 24px;
+    }
+}
+/* SERVICE ICONS + CENTERED INFO POPUP */
+body.home-page .service-group-grid .service-card-2 {
+    padding-bottom: 58px;
+}
+
+body.home-page .service-group--massage .service-group-grid .service-card-2,
+body.home-page .service-group--manual .service-group-grid .service-card-2,
+body.home-page .service-group--exercise .service-group-grid .service-card-2 {
+    padding: 26px 24px 58px;
+}
+
+body.home-page .service-icon-badge {
+    display: grid;
+    width: 60px;
+    height: 60px;
+    flex: 0 0 60px;
+    place-items: center;
+    margin-bottom: 14px;
+    border: 1px solid #d6e8f8;
+    border-radius: 50%;
+    background: #eaf4ff;
+    color: #2468a9;
+}
+
+body.home-page .service-icon-badge svg {
+    width: 38px;
+    height: 38px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.75;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+body.home-page .service-group--manual .service-icon-badge {
+    border-color: #f0dfcd;
+    background: #fff2e4;
+    color: #996c36;
+}
+
+body.home-page .service-group--exercise .service-icon-badge {
+    border-color: #d8ece5;
+    background: #eaf6f1;
+    color: #34836d;
+}
+
+body.home-page .service-info-trigger {
+    top: auto;
+    right: 12px;
+    bottom: 12px;
+}
+
+body.home-page .service-group--physical .service-number {
+    right: 52px;
+}
+
+body.home-page .service-group--physical .service-card-2 h4 {
+    padding-right: 0;
+}
+
+body.home-page .service-info-dialog {
+    text-align: center;
+}
+
+body.home-page .service-dialog-topline {
+    position: relative;
+    justify-content: center;
+}
+
+body.home-page .service-dialog-close {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+body.home-page .service-info-dialog .button {
+    margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+    body.home-page .service-group-grid .service-card-2 {
+        padding-bottom: 58px;
+    }
+}
+/* SERVICE POPUP — viewport centering */
+body.home-page .service-info-dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    margin: 0;
+    transform: translate(-50%, -50%);
+    max-height: calc(100vh - 32px);
+    max-height: calc(100dvh - 32px);
+    overflow-y: auto;
+}
+/* REFERENCE ICON — manual therapy */
+body.home-page .service-icon-reference {
+    display: block;
+    width: 60px;
+    height: 60px;
+    flex: 0 0 60px;
+    margin-bottom: 14px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+/* REFERENCE PICTOGRAM SIZES */
+body.home-page .service-group--physical .service-icon-reference,
+body.home-page .service-group--physical .service-icon-badge {
+    width: 54px;
+    height: 54px;
+    flex-basis: 54px;
+}
+
+body.home-page .service-group--physical .service-icon-badge svg {
+    width: 34px;
+    height: 34px;
+}
+
+/* PARTNER LOGOS — original partners, clearer presentation */
+body.home-page .partner-list {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 8px;
+}
+
+body.home-page .partner-logo {
+    min-height: 58px;
+    padding: 4px 2px;
+    gap: 0;
+}
+
+body.home-page .partner-logo img {
+    width: 136px;
+    height: 44px;
+    max-width: 100%;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+}
+
+body.home-page .partner-name {
+    color: var(--green-dark);
+    font: 700 15px/1 var(--sans);
+    letter-spacing: 1.5px;
+}
+
+@media (max-width: 900px) {
+    body.home-page .partner-list {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        gap: 4px;
+    }
+}
+
+@media (max-width: 600px) {
+    body.home-page .partner-list {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 8px;
+    }
+}
+/* PARTNERS — match existing logo colours */
+body.home-page .partners {
+    background: #ebf5fd;
+}
+
+body.home-page .partner-logo img {
+    mix-blend-mode: normal;
+}
+
+body.home-page .partner-logo img[src*="INTER_Polska.jpg"] {
+    mix-blend-mode: multiply;
+}
+/* OFFER CARD TITLES */
+body.home-page .service-group--massage .service-card-2 p,
+body.home-page .service-group--manual .service-card-2 p,
+body.home-page .service-group--exercise .service-card-2 p {
+    color: var(--green-dark);
+    font: 600 18px/1.25 var(--serif);
+}
+/* OFFER CARD HEADINGS INSIDE BOXES */
+body.home-page .service-group--massage .service-card-2 h4,
+body.home-page .service-group--manual .service-card-2 h4,
+body.home-page .service-group--exercise .service-card-2 h4 {
+    margin: 0 0 13px;
+    padding: 0;
+    color: var(--green-dark);
+    font: 600 18px/1.25 var(--serif);
+    text-align: center;
+}
+/* FIZYKOTERAPIA — unified card colour */
+body.home-page .service-group--physical .service-group-grid .service-card-2,
+body.home-page .service-group--physical .service-group-grid .service-card-2:nth-child(3n + 2),
+body.home-page .service-group--physical .service-group-grid .service-card-2:nth-child(3n) {
+    background: #f4f9ff;
+    border-color: #d6e7fa;
+}
+
+/* OFFER CARDS — one style, centered content */
+body.home-page .service-groups .service-group-grid .service-card-2,
+body.home-page .service-group--physical .service-group-grid .service-card-2:nth-child(3n + 2),
+body.home-page .service-group--physical .service-group-grid .service-card-2:nth-child(3n) {
+    min-height: 290px;
+    padding: 26px 24px 58px;
+    align-items: center;
+    border-color: #d6e7fa;
+    background: #f4f9ff;
+    text-align: center;
+}
+
+body.home-page .service-group-grid .service-card-2 h4 {
+    width: 100%;
+    padding: 0;
+    text-align: center;
+}
+
+body.home-page .service-group-grid .service-card-2 .service-details-list {
+    width: 100%;
+    padding: 0;
+    list-style-position: inside;
+    text-align: center;
+}
+
+body.home-page .service-group--physical .service-icon-reference,
+body.home-page .service-group--physical .service-icon-badge {
+    width: 60px;
+    height: 60px;
+    flex-basis: 60px;
+}
+
+body.home-page .service-group--physical .service-icon-badge svg {
+    width: 38px;
+    height: 38px;
+}
+
+/* OFFER PLUS INVITATION */
+body.home-page .section-heading .offer-plus-hint {
+    margin: 14px 0 0;
+    color: var(--green);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+/* INDEX SERVICE CARD SUMMARIES */
+body.home-page .service-group-grid .service-card-2 h4 {
+    min-height: 2.5em;
+    display: grid;
+    place-items: center;
+}
+
+body.home-page .service-group-grid .service-card-2 .service-card-summary {
+    width: 100%;
+    min-height: 3.1em;
+    margin: 0;
+    color: var(--muted);
+    font: 400 13px/1.55 var(--sans);
+    text-align: center;
+}
+
+/* HOME HERO — supplied full-width banner */
+body.home-page .home-hero {
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 1981 / 794;
+    overflow: hidden;
+}
+
+body.home-page .home-hero .hero-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    transform: none;
+    transform-origin: center;
+}
+
+@media (max-width: 600px) {
+    body.home-page .home-hero {
+        height: auto;
+        aspect-ratio: 1981 / 794;
+    }
+
+    body.home-page .home-hero .hero-image {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+    }
+}
