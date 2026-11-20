@@ -55,6 +55,16 @@
         });
     });
 
+    document.querySelectorAll(".service-card-2 > a[href='uslugi.html']").forEach((link) => {
+        link.addEventListener("click", (event) => {
+            const trigger = link.closest(".service-card-2")?.querySelector(".service-info-trigger");
+            if (!trigger) return;
+
+            event.preventDefault();
+            trigger.click();
+        });
+    });
+
     closeButton.addEventListener("click", () => dialog.close());
     dialog.addEventListener("click", (event) => {
         if (event.target === dialog) dialog.close();

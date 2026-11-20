@@ -2408,3 +2408,123 @@ body.services-page footer {
         min-height: 180px;
     }
 }
+
+/* LEGAL INFORMATION PAGES */
+body.legal-page {
+    background: #f7f8fa;
+    color: #18304a;
+}
+
+.legal-header {
+    background: #102b49;
+    color: #fff;
+    padding: 18px 0;
+}
+
+.legal-header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.legal-brand {
+    color: inherit;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 21px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.legal-brand i {
+    color: #d6c5a2;
+}
+
+.legal-contact-link {
+    color: #fff;
+    text-decoration: none;
+}
+
+.legal-content {
+    max-width: 900px;
+    padding-top: 70px;
+    padding-bottom: 80px;
+}
+
+.legal-content > .section-label {
+    color: #8c7653;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .13em;
+}
+
+.legal-content h1 {
+    margin: 12px 0 8px;
+    color: #102b49;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(38px, 6vw, 58px);
+}
+
+.legal-updated {
+    margin: 0 0 28px;
+    color: #647486;
+    font-size: 14px;
+}
+
+.legal-notice {
+    margin: 0 0 36px;
+    padding: 18px 20px;
+    border-left: 4px solid #ad8953;
+    border-radius: 4px;
+    background: #fff8eb;
+    line-height: 1.7;
+}
+
+.legal-content section {
+    margin: 0 0 30px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #dce2e8;
+}
+
+.legal-content h2 {
+    margin: 0 0 12px;
+    color: #102b49;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 24px;
+}
+
+.legal-content p,
+.legal-content li {
+    color: #42566c;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.legal-content p {
+    margin: 0 0 12px;
+}
+
+.legal-content a:not(.button) {
+    color: #315e85;
+}
+
+.legal-back-link {
+    display: inline-block;
+    margin-top: 8px;
+    text-decoration: none;
+}
+
+@media (max-width: 600px) {
+    .legal-content {
+        padding-top: 48px;
+        padding-bottom: 56px;
+    }
+
+    .legal-content h2 {
+        font-size: 21px;
+    }
+
+    .legal-content p {
+        font-size: 15px;
+    }
+}
