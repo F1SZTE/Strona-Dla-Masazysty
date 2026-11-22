@@ -37,31 +37,22 @@
     const description = document.getElementById("service-dialog-description");
     const closeButton = dialog.querySelector(".service-dialog-close");
 
-    document.querySelectorAll(".service-info-trigger").forEach((button) => {
-        button.addEventListener("click", () => {
-            title.textContent = button.dataset.serviceTitle || "Informacje o zabiegu";
+    document.querySelectorAll(".service-card-2 > a.service-info-trigger").forEach((link) => {
+        link.addEventListener("click", (event) => {
+            event.preventDefault();
+            title.textContent = link.dataset.serviceTitle || "Informacje o zabiegu";
             description.replaceChildren();
 
-            const template = document.getElementById(button.dataset.serviceContent || "");
+            const template = document.getElementById(link.dataset.serviceContent || "");
             if (template instanceof HTMLTemplateElement) {
                 description.append(template.content.cloneNode(true));
             } else {
                 const fallback = document.createElement("p");
-                fallback.textContent = button.dataset.serviceDescription || "";
+                fallback.textContent = link.dataset.serviceDescription || "";
                 description.append(fallback);
             }
 
             dialog.showModal();
-        });
-    });
-
-    document.querySelectorAll(".service-card-2 > a[href='uslugi.html']").forEach((link) => {
-        link.addEventListener("click", (event) => {
-            const trigger = link.closest(".service-card-2")?.querySelector(".service-info-trigger");
-            if (!trigger) return;
-
-            event.preventDefault();
-            trigger.click();
         });
     });
 

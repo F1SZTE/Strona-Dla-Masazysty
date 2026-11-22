@@ -360,9 +360,183 @@ h2 i {
 .service-card a {
     display: inline-block;
     margin-top: 25px;
-    color: var(--green);
+    color: var(--cream-dark);
     font-size: 13px;
     font-weight: 600;
+}
+
+/* OFFER CARD DETAILS */
+
+.service-groups {
+    display: grid;
+    gap: 34px;
+    margin-top: 45px;
+}
+
+.service-group-title {
+    margin-bottom: 16px;
+    font-family: var(--serif);
+    color: var(--green-dark);
+    font-size: 22px;
+}
+
+.service-group-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.service-group--massage-manual .service-group-grid,
+.service-group--exercise .service-group-grid,
+.service-group--hil-feature .service-group-grid {
+    grid-template-columns: 1fr;
+}
+
+.service-card-2 {
+    position: relative;
+    min-width: 0;
+    min-height: 280px;
+    padding: 34px 30px 28px;
+    border: 1px solid var(--border);
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: .3s;
+}
+
+.service-card-2:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 45px rgba(35,59,47,.1);
+}
+
+.service-card-2 h4 {
+    min-height: 58px;
+    margin: 18px 0 10px;
+    font-family: var(--serif);
+    color: var(--green-dark);
+    font-size: 21px;
+    line-height: 1.25;
+}
+
+.service-card-summary {
+    margin-bottom: 18px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.65;
+}
+
+.service-card-2 > a {
+    margin-top: auto;
+    color: var(--green);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.service-icon-reference,
+.service-icon-badge {
+    width: 58px;
+    height: 58px;
+}
+
+.service-icon-badge {
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--green-light);
+}
+
+.service-icon-badge svg {
+    width: 34px;
+    height: 34px;
+    fill: none;
+    stroke: var(--green-dark);
+    stroke-width: 2;
+}
+
+.service-info-trigger {
+    position: static !important;
+    display: inline-block !important;
+    width: auto !important;
+    height: auto !important;
+    margin: 18px 0 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    overflow: visible !important;
+    clip: auto !important;
+    clip-path: none !important;
+    white-space: normal !important;
+}
+
+.service-info-dialog {
+    width: min(760px, calc(100% - 30px));
+    max-height: calc(100vh - 40px);
+    margin: auto;
+    padding: 28px 32px 32px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text);
+    background: #fff;
+    box-shadow: 0 24px 80px rgba(17,40,30,.24);
+    overflow-y: auto;
+}
+
+.service-info-dialog::backdrop {
+    background: rgba(20,44,34,.55);
+}
+
+.service-dialog-topline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--green);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.service-dialog-close {
+    width: 36px;
+    height: 36px;
+    border: 0;
+    border-radius: 50%;
+    background: var(--cream);
+    color: var(--green-dark);
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.service-info-dialog h2 {
+    margin: 14px 0 18px;
+    font-family: var(--serif);
+    color: var(--green-dark);
+    line-height: 1.15;
+}
+
+.service-info-dialog-copy {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+}
+
+.service-info-dialog-copy p,
+.service-info-dialog-copy ul {
+    margin-bottom: 14px;
+    line-height: 1.7;
+}
+
+.service-info-dialog-copy h3 {
+    margin: 20px 0 8px;
+    color: var(--green-dark);
+}
+
+.service-info-dialog-copy ul {
+    padding-left: 22px;
+}
+
+.service-info-dialog > .button {
+    margin-top: 8px;
 }
 
 
@@ -436,6 +610,11 @@ h2 i {
     align-items: center; 
 } 
  
+.jaskulski-img { 
+    width: 20px;
+    margin: auto; 
+}
+
 .about-text p + p { 
     margin-top: 18px; 
 } 
@@ -449,7 +628,7 @@ h2 i {
 } 
  
 .about-box { 
-    min-height: 460px; 
+    min-height: 40px; 
     background: var(--green); 
     position: relative; 
     display: flex; 
@@ -692,6 +871,10 @@ footer {
         grid-template-columns: 1fr 1fr;
     }
 
+    .service-group-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
     .split-section {
         grid-template-columns: 1fr;
     }
@@ -754,6 +937,25 @@ footer {
 
     .services-grid {
         grid-template-columns: 1fr;
+    }
+
+    .service-group-grid,
+    .service-group--massage-manual .service-group-grid,
+    .service-group--exercise .service-group-grid,
+    .service-group--hil-feature .service-group-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card-2 {
+        min-height: 250px;
+    }
+
+    .service-card-2 h4 {
+        min-height: 0;
+    }
+
+    .service-info-dialog {
+        padding: 22px 20px 24px;
     }
 
     .service-card {

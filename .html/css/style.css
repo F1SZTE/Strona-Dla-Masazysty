@@ -50,8 +50,9 @@ a {
     display: flex;
     align-items: center;
     background: rgba(255,255,255,.96);
-    position: relative;
-    z-index: 10;
+    position: sticky;
+    top: 0;
+    z-index: 100;
     border-bottom: 1px solid rgba(36,104,169,.12);
 }
 
@@ -759,6 +760,42 @@ h2 i {
     height: 100%;
     object-fit: cover;
 }
+
+.jaskulski-img {
+    position: relative;
+    aspect-ratio: 1;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.jaskulski-img img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%;
+}
+
+.about-box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    aspect-ratio: auto;
+    overflow: visible;
+}
+
+.about-box h3 {
+    position: static;
+    width: 100%;
+    margin: 14px 0 0;
+    padding: 0;
+    background: transparent;
+    color: var(--green-dark);
+    font-family: var(--serif);
+    font-size: 18px;
+    text-align: center;
+}
  
  
 /* REVIEWS */ 
@@ -1359,12 +1396,14 @@ body.home-page .about-box {
 }
 
 body.home-page .partners {
-    padding: 18px 0 20px;
-    background: #edf6ff;
+    padding: 12px 0;
+    border-top: 1px solid #edf1f4;
+    border-bottom: 1px solid #edf1f4;
+    background: #fff;
 }
 
 body.home-page .partners-heading {
-    margin-bottom: 8px;
+    display: none;
 }
 
 body.home-page .partners-heading .section-label {
@@ -1564,15 +1603,19 @@ body.home-page .service-group--hil-feature {
 }
 
 body.home-page .service-group--massage-manual .service-group-grid .service-card-2 {
+    height: 290px;
     min-height: 290px;
-    border-color: #d6e7fa;
+    border: 2px solid #d6e7fa;
     background: #f4f9ff;
+    box-shadow: 0 8px 24px rgba(46, 116, 174, .08);
 }
 
 body.home-page .service-group--exercise .service-group-grid .service-card-2 {
+    height: 290px;
     min-height: 290px;
-    border-color: #d8ece5;
+    border: 2px solid #d8ece5;
     background: #f3faf7;
+    box-shadow: 0 8px 24px rgba(52, 131, 109, .08);
 }
 
 body.home-page .service-group--hil-feature .service-group-grid {
@@ -1580,9 +1623,11 @@ body.home-page .service-group--hil-feature .service-group-grid {
 }
 
 body.home-page .service-group--hil-feature .service-group-grid .service-card-2 {
+    height: 290px;
     min-height: 290px;
-    border-color: #f0e2d1;
+    border: 2px solid #f0e2d1;
     background: #fffaf4;
+    box-shadow: 0 8px 24px rgba(153, 108, 54, .09);
 }
 
 body.home-page .service-group--physical {
@@ -1593,8 +1638,9 @@ body.home-page .service-group--physical {
 }
 
 body.home-page .service-group--physical .service-group-grid .service-card-2 {
-    min-height: 174px;
-    border-color: #d8e8f7;
+    height: 290px;
+    min-height: 290px;
+    border: 2px solid #d8e8f7;
     border-radius: 10px;
     background: #f5faff;
     box-shadow: 0 5px 18px rgba(27, 90, 145, .035);
@@ -1622,27 +1668,24 @@ body.home-page .service-group-grid .service-card-2:hover {
 }
 
 body.home-page .service-info-trigger {
-    position: absolute;
-    z-index: 2;
-    top: 12px;
-    right: 12px;
-    display: grid;
-    width: 32px;
-    height: 32px;
-    place-items: center;
-    border: 1px solid rgba(36, 104, 169, .35);
-    border-radius: 50%;
-    background: #fff;
+    position: static;
+    z-index: auto;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    margin-top: auto;
+    padding: 18px 0 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
     color: var(--green);
-    font: 400 23px/1 var(--sans);
+    font: 600 11px/1.4 var(--sans);
     cursor: pointer;
-    transition: background .2s ease, color .2s ease, transform .2s ease;
 }
 
 body.home-page .service-info-trigger:hover {
-    transform: rotate(90deg);
-    background: var(--green);
-    color: #fff;
+    background: transparent;
+    color: var(--green-dark);
 }
 
 body.home-page .service-info-trigger:focus-visible,
@@ -1798,8 +1841,8 @@ body.home-page .service-group--exercise .service-icon-badge {
 
 body.home-page .service-info-trigger {
     top: auto;
-    right: 12px;
-    bottom: 12px;
+    right: auto;
+    bottom: auto;
 }
 
 body.home-page .service-group--physical .service-number {
@@ -1912,7 +1955,10 @@ body.home-page .partner-name {
 }
 /* PARTNERS — match existing logo colours */
 body.home-page .partners {
-    background: #ebf5fd;
+    padding: 12px 0;
+    border-top: 1px solid #edf1f4;
+    border-bottom: 1px solid #edf1f4;
+    background: #fff;
 }
 
 body.home-page .partner-logo img {
@@ -1949,6 +1995,7 @@ body.home-page .service-group--physical .service-group-grid .service-card-2:nth-
 body.home-page .service-groups .service-group-grid .service-card-2,
 body.home-page .service-group--physical .service-group-grid .service-card-2:nth-child(3n + 2),
 body.home-page .service-group--physical .service-group-grid .service-card-2:nth-child(3n) {
+    height: 290px;
     min-height: 290px;
     padding: 26px 24px 58px;
     align-items: center;
@@ -2005,6 +2052,49 @@ body.home-page .service-group-grid .service-card-2 .service-card-summary {
     color: var(--muted);
     font: 400 13px/1.55 var(--sans);
     text-align: center;
+}
+
+/* INDEX OFFER CARD COLOURS */
+body.home-page .service-group--massage-manual .service-group-grid .service-card-2 {
+    border-color: #bfd7cd;
+    background: #edf4f1;
+    box-shadow: 0 8px 24px rgba(52, 131, 109, .10);
+}
+
+body.home-page .service-group--exercise .service-group-grid .service-card-2 {
+    border-color: #bfd7cd;
+    background: #edf5f1;
+    box-shadow: 0 8px 24px rgba(52, 131, 109, .10);
+}
+
+body.home-page .service-group--hil-feature .service-group-grid .service-card-2 {
+    border-color: #77aaa4;
+    background: #edf7f5;
+    box-shadow: 0 10px 28px rgba(52, 131, 109, .12);
+}
+
+body.home-page .service-group--physical .service-group-grid .service-card-2,
+body.home-page .service-group--physical .service-group-grid .service-card-2:nth-child(3n + 2),
+body.home-page .service-group--physical .service-group-grid .service-card-2:nth-child(3n) {
+    border-width: 2px;
+    box-shadow: 0 8px 24px rgba(23, 75, 122, .07);
+}
+
+body.home-page .service-group--physical .service-group-grid .service-card-2:nth-child(3n + 1) {
+    border-color: #b2cce5;
+    background: #eef5fc;
+}
+
+body.home-page .service-group--physical .service-group-grid .service-card-2:nth-child(3n + 2) {
+    border-color: #bfd7cd;
+    background: #edf5f1;
+    box-shadow: 0 8px 24px rgba(52, 131, 109, .08);
+}
+
+body.home-page .service-group--physical .service-group-grid .service-card-2:nth-child(3n) {
+    border-color: #bfd7cd;
+    background: #edf5f1;
+    box-shadow: 0 8px 24px rgba(52, 131, 109, .08);
 }
 
 /* HOME HERO — supplied full-width banner */
@@ -2526,5 +2616,100 @@ body.legal-page {
 
     .legal-content p {
         font-size: 15px;
+    }
+}
+
+/* FINAL INDEX OFFER PALETTE */
+body.home-page .service-groups .service-group-grid .service-card-2 {
+    height: 290px;
+    min-height: 290px;
+    border-width: 2px;
+}
+
+body.home-page .service-group--massage-manual .service-group-grid .service-card-2 {
+    border-color: #86aec8;
+    background: #edf5fb;
+    box-shadow: 0 10px 28px rgba(36, 104, 169, .12);
+}
+
+body.home-page .service-group--exercise .service-group-grid .service-card-2 {
+    border-color: #cdbd94;
+    background: #faf5e8;
+    box-shadow: 0 10px 28px rgba(153, 108, 54, .12);
+}
+
+body.home-page .service-group--hil-feature .service-group-grid .service-card-2 {
+    border-color: #62948c;
+    background: #e7f2ef;
+    box-shadow: 0 12px 32px rgba(52, 131, 109, .16);
+}
+
+body.home-page .service-group--physical .service-group-grid .service-card-2 {
+    border-color: #86aec8;
+    background: #edf5fb;
+    box-shadow: 0 10px 26px rgba(36, 104, 169, .10);
+}
+
+body.home-page .service-group--physical .service-group-grid .service-card-2:nth-child(3n + 2),
+body.home-page .service-group--physical .service-group-grid .service-card-2:nth-child(5) {
+    border-color: #8ab09f;
+    background: #edf6f1;
+    box-shadow: 0 10px 26px rgba(52, 131, 109, .10);
+}
+
+body.home-page .service-group--physical .service-group-grid .service-card-2:nth-child(3),
+body.home-page .service-group--physical .service-group-grid .service-card-2:nth-child(6),
+body.home-page .service-group--physical .service-group-grid .service-card-2:nth-child(4),
+body.home-page .service-group--physical .service-group-grid .service-card-2:nth-child(7),
+body.home-page .service-group--physical .service-group-grid .service-card-2:nth-child(2),
+body.home-page .service-group--physical .service-group-grid .service-card-2:nth-child(5) {
+    border-color: #86aec8;
+    background: #edf5fb;
+    box-shadow: 0 10px 26px rgba(36, 104, 169, .10);
+}
+
+/* INDEX OFFER — two cards on top, 4 + 3 on the bottom */
+body.home-page .service-groups {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+body.home-page .service-group--massage-manual,
+body.home-page .service-group--exercise {
+    grid-row: 1;
+}
+
+body.home-page .service-group--physical {
+    grid-column: 1 / -1;
+}
+
+body.home-page .service-group--physical .service-group-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+@media (max-width: 900px) {
+    body.home-page .service-groups {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    body.home-page .service-group--physical .service-group-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    body.home-page .service-groups {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    body.home-page .service-group--massage-manual,
+    body.home-page .service-group--exercise,
+    body.home-page .service-group--physical {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    body.home-page .service-group--physical .service-group-grid {
+        grid-template-columns: minmax(0, 1fr);
     }
 }

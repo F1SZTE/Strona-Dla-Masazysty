@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=4">
 </head>
 
 <body class="home-page">
@@ -22,14 +22,14 @@
 
         <div class="nav-panel" id="primary-navigation">
             <nav aria-label="Nawigacja główna">
-                <a href="uslugi.html">Nasze Usługi</a>
                 <a href="o-mnie.html">O nas</a>
-                <a href="kontakt.html">Kontakt</a>
+                <div>
+                        <a href="tel:+48 502 310 238">
+                            +48 502 310 238
+                        </a>
+                </div>
             </nav>
 
-            <a href="kontakt.html" class="nav-button">
-                Umów wizytę
-            </a>
         </div>
 
         <button class="menu-button" type="button" aria-label="Otwórz menu" aria-expanded="false" aria-controls="primary-navigation">☰</button>
@@ -105,7 +105,6 @@
                 metody terapii pozwalają nam dopasować leczenie
                 do potrzeb każdego pacjenta.
             </p>
-            <p class="offer-plus-hint">Kliknij „+” na wybranej karcie, aby poznać szczegóły zabiegu.</p>
 
         </div>
 
@@ -115,10 +114,9 @@
                 <div class="service-group-grid">
                     <article class="service-card-2">
                         <img class="service-icon-reference" src="images/service-massage-reference.png" alt="" aria-hidden="true">
-                        <button class="service-info-trigger" type="button" data-service-title="Masaż leczniczy i terapia manualna" data-service-content="service-copy-massage" aria-label="Więcej informacji: Masaż leczniczy i terapia manualna"><span aria-hidden="true">+</span></button>
                         <h4>Masaż leczniczy i terapia manualna</h4>
                         <p class="service-card-summary">Masaż i techniki manualne dobierane do potrzeb oraz aktualnego stanu pacjenta.</p>
-                        <a href="uslugi.html">Dowiedz się więcej →</a>
+                        <a href="uslugi.html" class="service-info-trigger" data-service-title="Masaż leczniczy i terapia manualna" data-service-content="service-copy-massage">Dowiedz się więcej →</a>
                     </article>
                 </div>
             </section>
@@ -127,86 +125,69 @@
                 <div class="service-group-grid">
                     <article class="service-card-2">
                         <img class="service-icon-reference" src="images/service-exercise-reference.png" alt="" aria-hidden="true">
-                        <button class="service-info-trigger" type="button" data-service-title="Ćwiczenia i wyciągi" data-service-content="service-copy-exercise" aria-label="Więcej informacji: Ćwiczenia i wyciągi"><span aria-hidden="true">+</span></button>
                         <h4>Ćwiczenia i wyciągi</h4>
                         <p class="service-card-summary">Ćwiczenia i wyciągi dobierane do możliwości pacjenta.</p>
-                        <a href="uslugi.html">Dowiedz się więcej →</a>
+                        <a href="uslugi.html" class="service-info-trigger" data-service-title="Ćwiczenia i wyciągi" data-service-content="service-copy-exercise">Dowiedz się więcej →</a>
                     </article>
                 </div>
             </section>
 
-            <section class="service-group service-group--hil-feature">
-                <h3 class="service-group-title">Wyróżniony zabieg</h3>
-                <div class="service-group-grid">
-                    <article class="service-card-2">
-                        <div class="service-number">01</div>
-                        <img class="service-icon-reference" src="images/service-laser-hil-reference.png" alt="" aria-hidden="true">
-                        <button class="service-info-trigger" type="button" data-service-title="Laseroterapia wysokoenergetyczna (HIL)" data-service-content="service-copy-laser-hil" aria-label="Więcej informacji: Laseroterapia wysokoenergetyczna (HIL)"><span aria-hidden="true">+</span></button>
-                        <h4>Laseroterapia wysokoenergetyczna (HIL)</h4>
-                        <p class="service-card-summary">Laseroterapia wysokoenergetyczna z urządzeniem HIL.</p>
-                        <a href="uslugi.html">Dowiedz się więcej →</a>
-                    </article>
-                </div>
-            </section>
 
             <section class="service-group service-group--physical">
                 <h3 class="service-group-title">Fizykoterapia</h3>
                 <div class="service-group-grid">
                     <article class="service-card-2">
+                        <div class="service-number">01</div>
+                        <img class="service-icon-reference" src="images/service-laser-hil-reference.png" alt="" aria-hidden="true">
+                        <h4>Laseroterapia Wysokoenergetyczna</h4>
+                        <p class="service-card-summary">Laseroterapia wysokoenergetyczna z urządzeniem HIL.</p>
+                        <a href="uslugi.html" class="service-info-trigger" data-service-title="Laseroterapia wysokoenergetyczna (HIL)" data-service-content="service-copy-laser-hil">Dowiedz się więcej →</a>
+                    </article>
+                    <article class="service-card-2">
                         <div class="service-number">02</div>
                         <img class="service-icon-reference" src="images/service-laser-low-reference.png" alt="" aria-hidden="true">
-                        <button class="service-info-trigger" type="button" data-service-title="Laseroterapia niskoenergetyczna" data-service-content="service-copy-laser-low" aria-label="Więcej informacji: Laseroterapia niskoenergetyczna"><span aria-hidden="true">+</span></button>
                         <h4>Laseroterapia niskoenergetyczna</h4>
                         <p class="service-card-summary">Laseroterapia z promieniowaniem o niskiej mocy.</p>
-                        <a href="uslugi.html">Dowiedz się więcej →</a>
+                        <a href="uslugi.html" class="service-info-trigger" data-service-title="Laseroterapia niskoenergetyczna" data-service-content="service-copy-laser-low">Dowiedz się więcej →</a>
                     </article>
                     <article class="service-card-2">
                         <div class="service-number">03</div>
                         <img class="service-icon-reference" src="images/service-ultrasound-reference.png" alt="" aria-hidden="true">
-                        <button class="service-info-trigger" type="button" data-service-title="Ultradźwięki" data-service-content="service-copy-ultrasound" aria-label="Więcej informacji: Ultradźwięki"><span aria-hidden="true">+</span></button>
                         <h4>Ultradźwięki</h4>
                         <p class="service-card-summary">Zabieg fizykoterapeutyczny wykorzystujący ultradźwięki.</p>
-                        <a href="uslugi.html">Dowiedz się więcej →</a>
+                        <a href="uslugi.html" class="service-info-trigger" data-service-title="Ultradźwięki" data-service-content="service-copy-ultrasound">Dowiedz się więcej →</a>
                     </article>
                     <article class="service-card-2">
                         <div class="service-number">04</div>
                         <img class="service-icon-reference" src="images/service-cryotherapy-reference.png" alt="" aria-hidden="true">
-                        <button class="service-info-trigger" type="button" data-service-title="Krioterapia miejscowa" data-service-content="service-copy-cryotherapy" aria-label="Więcej informacji: Krioterapia miejscowa"><span aria-hidden="true">+</span></button>
                         <h4>Krioterapia miejscowa</h4>
                         <p class="service-card-summary">Miejscowe zastosowanie niskiej temperatury.</p>
-                        <a href="uslugi.html">Dowiedz się więcej →</a>
+                        <a href="uslugi.html" class="service-info-trigger" data-service-title="Krioterapia miejscowa" data-service-content="service-copy-cryotherapy">Dowiedz się więcej →</a>
                     </article>
                     <article class="service-card-2">
                         <div class="service-number">05</div>
                         <img class="service-icon-reference" src="images/service-magnetotherapy-reference.png" alt="" aria-hidden="true">
-                        <button class="service-info-trigger" type="button" data-service-title="Magnetoterapia" data-service-content="service-copy-magnetotherapy" aria-label="Więcej informacji: Magnetoterapia"><span aria-hidden="true">+</span></button>
                         <h4>Magnetoterapia</h4>
                         <p class="service-card-summary">Magnetoterapia o niskiej lub wysokiej częstotliwości, także z urządzeniem TERAPULS.</p>
-                        <a href="uslugi.html">Dowiedz się więcej →</a>
+                        <a href="uslugi.html" class="service-info-trigger" data-service-title="Magnetoterapia" data-service-content="service-copy-magnetotherapy">Dowiedz się więcej →</a>
                     </article>
                     <article class="service-card-2">
                         <div class="service-number">06</div>
                         <img class="service-icon-reference" src="images/service-sollux-reference.png" alt="" aria-hidden="true">
-                        <button class="service-info-trigger" type="button" data-service-title="Lampa Sollux" data-service-content="service-copy-sollux" aria-label="Więcej informacji: Lampa Sollux"><span aria-hidden="true">+</span></button>
                         <h4>Lampa Sollux</h4>
                         <p class="service-card-summary">Naświetlanie wybranego obszaru lampą Sollux.</p>
-                        <a href="uslugi.html">Dowiedz się więcej →</a>
+                        <a href="uslugi.html" class="service-info-trigger" data-service-title="Lampa Sollux" data-service-content="service-copy-sollux">Dowiedz się więcej →</a>
                     </article>
                     <article class="service-card-2">
                         <div class="service-number">07</div>
                         <span class="service-icon-badge" aria-hidden="true"><svg viewBox="0 0 48 48" focusable="false"><path d="M24 4v7m0 26v7M4 24h7m26 0h7M10 10l5 5m18 18 5 5m0-28-5 5M15 33l-5 5"/><circle cx="24" cy="24" r="7"/></svg></span>
-                        <button class="service-info-trigger" type="button" data-service-title="Elektroterapia" data-service-content="service-copy-electrotherapy" aria-label="Więcej informacji: Elektroterapia"><span aria-hidden="true">+</span></button>
                         <h4>Elektroterapia</h4>
                         <p class="service-card-summary">Zabieg z użyciem prądów aplikowanych przez elektrody.</p>
-                        <a href="uslugi.html">Dowiedz się więcej →</a>
+                        <a href="uslugi.html" class="service-info-trigger" data-service-title="Elektroterapia" data-service-content="service-copy-electrotherapy">Dowiedz się więcej →</a>
                     </article>
                 </div>
             </section>
         </div>
-
-        <a href="uslugi.html" class="button button-primary intro-services-button">
-            Sprawdź nasze usługi.
-        </a>
 
     </div>
 
@@ -293,10 +274,6 @@
 
         </div>
 
-        <a href="kontakt.html" class="button button-primary">
-            Umów wizytę →
-        </a>
-
     </div>
 
 </section>
@@ -350,8 +327,7 @@
         </p>
 
         <div class="footer-links">
-            <a href="politykaprywatnosci.html">Polityka prywatności</a>
-            <a href="Regulamin.html">Regulamin</a>
+            <a href="Regulamin.html">Polityka Prywatności</a>
         </div>
 
     </div>
@@ -533,7 +509,7 @@
     <p>W elektrostymulacji wykorzystuje się prąd impulsowy do pobudzania nerwów i mięśni. Zabieg może wspierać zwiększanie siły i masy mięśniowej oraz powrót osłabionego unerwienia.</p>
 </template>
 
-<script src="../.js/script.js" defer></script>
+<script src="../.js/script.js?v=4" defer></script>
 
 </body>
 </html>
