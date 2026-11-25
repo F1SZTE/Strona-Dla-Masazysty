@@ -1631,10 +1631,15 @@ body.home-page .service-group--hil-feature .service-group-grid .service-card-2 {
 }
 
 body.home-page .service-group--physical {
-    padding: 26px 0 0;
+    padding: 32px 0 0;
     border: 0;
     border-radius: 0;
     background: transparent;
+}
+
+body.home-page .service-group--physical .service-group-title {
+    margin: 4px 0 26px;
+    font-size: 30px;
 }
 
 body.home-page .service-group--physical .service-group-grid .service-card-2 {
@@ -1783,7 +1788,12 @@ body.home-page .service-info-dialog .button {
 
 @media (max-width: 600px) {
     body.home-page .service-group--physical {
-        padding-top: 22px;
+        padding-top: 28px;
+    }
+
+    body.home-page .service-group--physical .service-group-title {
+        margin-bottom: 22px;
+        font-size: 26px;
     }
 
     body.home-page .service-info-dialog {
@@ -2627,15 +2637,15 @@ body.home-page .service-groups .service-group-grid .service-card-2 {
 }
 
 body.home-page .service-group--massage-manual .service-group-grid .service-card-2 {
-    border-color: #86aec8;
-    background: #edf5fb;
+    border-color: #c9dced;
+    background: #eaf3fb;
     box-shadow: 0 10px 28px rgba(36, 104, 169, .12);
 }
 
 body.home-page .service-group--exercise .service-group-grid .service-card-2 {
-    border-color: #cdbd94;
-    background: #faf5e8;
-    box-shadow: 0 10px 28px rgba(153, 108, 54, .12);
+    border-color: #c9dced;
+    background: #eaf3fb;
+    box-shadow: 0 10px 28px rgba(36, 104, 169, .12);
 }
 
 body.home-page .service-group--hil-feature .service-group-grid .service-card-2 {
