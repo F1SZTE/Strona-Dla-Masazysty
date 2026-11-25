@@ -74,7 +74,7 @@ a {
 }
 
 .navbar .logo {
-    display: none;
+    display: flex;
 }
 
 .logo span span {
@@ -2609,9 +2609,19 @@ body.legal-page {
 }
 
 .legal-back-link {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     margin-top: 8px;
     text-decoration: none;
+}
+
+.contact-back-link {
+    padding-bottom: 32px;
+}
+
+.about-back-link {
+    padding-bottom: 32px;
 }
 
 @media (max-width: 600px) {

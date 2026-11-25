@@ -12,10 +12,20 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="legal-page">
-<header class="legal-header">
-    <div class="container legal-header-inner">
-        <a href="index.html" class="legal-brand">Fizjoterapia <i>Mokotowska</i></a>
-        <a href="kontakt.html" class="legal-contact-link">Kontakt</a>
+<header class="navbar">
+    <div class="container nav-inner">
+        <a href="index.html" class="logo">
+            <img class="logo-image" src="images/logo-masaz-aj.webp" alt="Fizjoterapia Mokotowska">
+        </a>
+        <div class="nav-panel" id="primary-navigation">
+            <nav aria-label="Nawigacja główna">
+                <a href="o-mnie.html">O nas</a>
+                <div>
+                    <a href="tel:+48 502 310 238">+48 502 310 238</a>
+                </div>
+            </nav>
+        </div>
+        <button class="menu-button" type="button" aria-label="Otwórz menu" aria-expanded="false" aria-controls="primary-navigation">☰</button>
     </div>
 </header>
 
@@ -170,5 +180,6 @@ wyświetli się poprawnie.</p>
         </div>
     </div>
 </footer>
+<script src="../.js/script.js?v=4" defer></script>
 </body>
 </html>
