@@ -1276,13 +1276,15 @@ footer {
     }
 
     .footer-inner {
-        align-items: flex-start;
+        align-items: center;
         flex-direction: column;
         gap: 18px;
+        text-align: center;
     }
 
     .footer-links {
         flex-direction: column;
+        align-items: center;
         gap: 10px;
     }
 }   
@@ -1557,6 +1559,10 @@ body.home-page .cta .button-light {
 
     body.home-page .about {
         padding: 38px 0;
+    }
+
+    body.home-page .intro {
+        padding-top: 28px;
     }
 
     body.home-page .about-grid {
@@ -2625,6 +2631,10 @@ body.legal-page {
 }
 
 @media (max-width: 600px) {
+    body:not(.home-page) .about {
+        padding-bottom: 24px;
+    }
+
     .legal-content {
         padding-top: 48px;
         padding-bottom: 56px;
